@@ -17,20 +17,20 @@
 </svelte:head>
 
 <section class="hero-grid">
-	<div class="card p-6 md:p-7">
+	<div class="space-y-5">
 		<p class="text-xs tracking-[0.16em] text-[var(--text-muted)] uppercase">
 			Open access | Peer reviewed | ISSN: {journal.issn}
 		</p>
 		<h1
-			class="mt-3 max-w-4xl text-4xl leading-tight font-semibold text-[var(--text-strong)] md:text-5xl"
+			class="max-w-4xl text-4xl leading-tight font-semibold text-[var(--text-strong)] md:text-5xl"
 		>
 			Journal of Young Scientists & Engineers (JYSE)
 		</h1>
-		<p class="mt-4 max-w-3xl text-base leading-8 text-[var(--text-default)]">
+		<p class="max-w-3xl text-base leading-8 text-[var(--text-default)]">
 			{journal.description} JYSE is designed for emerging researchers, including high-school and early
 			undergraduate authors building strong foundations in scientific writing.
 		</p>
-		<div class="mt-5 grid max-w-3xl gap-2 text-sm text-[var(--text-muted)] md:grid-cols-2">
+		<div class="grid max-w-3xl gap-2 text-sm text-[var(--text-muted)] md:grid-cols-2">
 			<p class="flex items-center gap-2">
 				<svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4">
 					<path
@@ -64,7 +64,7 @@
 				{journal.firstYear}
 			</p>
 		</div>
-		<div class="mt-6 flex flex-wrap gap-3">
+		<div class="flex flex-wrap gap-3">
 			<a
 				href={resolve('/submit')}
 				class="focus-ring rounded-sm bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-[var(--accent-contrast)]"
@@ -78,7 +78,7 @@
 		</div>
 	</div>
 
-	<aside class="card p-5">
+	<aside class="card self-start p-5 lg:ml-2">
 		<p class="text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase">Important dates</p>
 		<p class="mt-3 text-sm text-[var(--text-default)]">
 			Articles submission open for <span class="font-medium text-[var(--text-strong)]"

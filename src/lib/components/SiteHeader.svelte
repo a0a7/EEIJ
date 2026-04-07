@@ -15,43 +15,31 @@
 </script>
 
 <header class="site-shell border-b border-[var(--border)]/80">
-	<div class="mx-auto w-full max-w-6xl px-6 py-4">
-		<div class="flex flex-wrap items-center justify-between gap-3">
+	<div class="container-shell py-4">
+		<div class="flex flex-wrap items-start justify-between gap-3">
 			<a href={resolve('/')} class="space-y-1">
 				<p class="text-xs tracking-[0.16em] text-[var(--text-muted)]">
 					JYSE • ISSN 2319-6378 (Online)
 				</p>
-				<p class="text-xl font-semibold text-[var(--text-strong)] md:text-2xl">
+				<p class="text-lg font-semibold text-[var(--text-strong)] md:text-2xl">
 					Journal of Young Scientists & Engineers
 				</p>
 				<p class="text-sm text-[var(--text-muted)]">
 					For emerging researchers in science and engineering
 				</p>
 			</a>
-			<div class="flex items-center gap-2">
-				<a
-					href={resolve('/submit')}
-					class="focus-ring hidden items-center gap-1 rounded-sm border border-[var(--border)] bg-[var(--surface)] px-3 py-1.5 text-xs text-[var(--text-default)] hover:border-[var(--accent)] md:inline-flex"
-				>
-					<svg aria-hidden="true" viewBox="0 0 24 24" class="h-3.5 w-3.5">
-						<path
-							fill="currentColor"
-							d="M12 3a1 1 0 0 1 1 1v7h7a1 1 0 1 1 0 2h-7v7a1 1 0 1 1-2 0v-7H4a1 1 0 1 1 0-2h7V4a1 1 0 0 1 1-1Z"
-						/>
-					</svg>
-					<span>Submit Article</span>
+			<div class="flex items-center gap-3">
+				<a href={resolve('/submit')} class="text-sm text-[var(--accent)] hover:underline">
+					Submit Article
 				</a>
 				<ThemeToggle />
 			</div>
 		</div>
-		<nav
-			aria-label="Primary"
-			class="mt-4 grid gap-1 rounded-md border border-[var(--border)]/90 bg-[var(--surface)] p-2 md:grid-cols-6"
-		>
+		<nav aria-label="Primary" class="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
 			{#each navItems as item (item.href)}
 				<a
 					href={resolve(item.href)}
-					class="rounded-sm px-3 py-2 text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:bg-[var(--surface-elevated)] hover:text-[var(--text-strong)]"
+					class="text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
 				>
 					{item.label}
 				</a>

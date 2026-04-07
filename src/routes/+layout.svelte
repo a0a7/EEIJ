@@ -26,7 +26,7 @@
 
 <div class="min-h-screen bg-[var(--bg)] text-[var(--text-default)]">
 	<SiteHeader />
-	<main class="mx-auto w-full max-w-6xl px-6 py-10">
+	<main class="container-shell py-10">
 		{#key page.url.pathname}
 			<div in:fade={{ duration: 180 }} out:fade={{ duration: 120 }}>
 				{@render children()}

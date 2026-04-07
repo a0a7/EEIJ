@@ -3,11 +3,6 @@
 
 	type Theme = 'light' | 'dark';
 	let theme = $state<Theme>('dark');
-	let initialized = $state(false);
-
-	const applyTheme = (nextTheme: Theme) => {
-		document.documentElement.dataset.theme = nextTheme;
-	};
 
 	onMount(() => {
 		const savedTheme = localStorage.getItem('jyse-theme');
@@ -16,14 +11,11 @@
 		} else {
 			theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 		}
-
-		applyTheme(theme);
-		initialized = true;
 	});
 
 	$effect(() => {
-		if (!initialized) return;
-		applyTheme(theme);
+		if (typeof document === 'undefined') return;
+		document.documentElement.dataset.theme = theme;
 		localStorage.setItem('jyse-theme', theme);
 	});
 
