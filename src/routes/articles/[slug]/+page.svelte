@@ -1,5 +1,5 @@
 <script lang="ts">
-	/* eslint-disable svelte/no-navigation-without-resolve */
+	/* eslint-disable svelte/no-navigation-without-resolve -- this page intentionally renders dynamic external DOI/Zenodo/ORCID URLs */
 	import TagPill from '$lib/components/TagPill.svelte';
 	import { journal } from '$lib/data/journal';
 	import type { Author } from '$lib/data/journal';
