@@ -121,8 +121,7 @@
 			<p
 				class="rounded-md border border-[var(--border)] bg-[var(--surface-elevated)] px-4 py-3 text-sm text-[var(--text-default)]"
 			>
-				Submission received successfully. Your manuscript is now in editorial screening, and a
-				confirmation email with tracking details has been sent to the corresponding author.
+				Submission received successfully. Thank you for submitting your manuscript to JYSE.
 			</p>
 		{/if}
 	</form>
