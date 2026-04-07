@@ -1,0 +1,110 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	--font-serif: 'Source Serif 4', 'Iowan Old Style', 'Palatino Linotype', Palatino, serif;
+	--font-sans: 'Inter', 'Avenir Next', 'Segoe UI', sans-serif;
+}
+
+:global(html) {
+	font-family: var(--font-sans);
+	background: var(--bg);
+	color: var(--text-default);
+	text-rendering: geometricPrecision;
+}
+
+:global(body) {
+	min-height: 100vh;
+	background: var(--bg);
+	color: var(--text-default);
+}
+
+:global(html[data-theme='dark']) {
+	--bg: #161a21;
+	--surface: #1d2330;
+	--surface-elevated: #252c3b;
+	--text-strong: #f4f6fb;
+	--text-default: #d7ddea;
+	--text-muted: #a4adbf;
+	--border: #384256;
+	--accent: #91a9ff;
+	--accent-contrast: #0f172b;
+	--figure-a: #7b97ff;
+	--figure-b: #7ee3d0;
+}
+
+:global(html:not([data-theme])),
+:global(html[data-theme='light']) {
+	--bg: #f4f5f8;
+	--surface: #ffffff;
+	--surface-elevated: #ebeff7;
+	--text-strong: #101625;
+	--text-default: #273044;
+	--text-muted: #54607a;
+	--border: #c5cfdf;
+	--accent: #2d4cc9;
+	--accent-contrast: #ffffff;
+	--figure-a: #5874f0;
+	--figure-b: #2ea596;
+}
+
+:global(.site-shell) {
+	background: color-mix(in oklab, var(--bg) 90%, transparent);
+}
+
+:global(.card) {
+	border: 1px solid color-mix(in oklab, var(--border) 82%, transparent);
+	border-radius: 1rem;
+	background: var(--surface);
+	transition:
+		transform 220ms ease,
+		border-color 220ms ease,
+		box-shadow 220ms ease;
+}
+
+:global(.card:hover) {
+	transform: translateY(-2px);
+	border-color: color-mix(in oklab, var(--accent) 35%, var(--border));
+	box-shadow: 0 12px 36px -26px color-mix(in oklab, var(--accent) 45%, black);
+}
+
+:global(.focus-ring:focus-visible) {
+	outline: 2px solid var(--accent);
+	outline-offset: 4px;
+	border-radius: 0.4rem;
+}
+
+:global(.theme-toggle) {
+	border: 1px solid var(--border);
+	border-radius: 999px;
+	padding: 0.42rem 0.8rem;
+	font-size: 0.75rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--text-default);
+	background: var(--surface);
+	transition: all 180ms ease;
+}
+
+:global(.theme-toggle:hover) {
+	border-color: var(--accent);
+	color: var(--text-strong);
+}
+
+:global(.cover-card) {
+	background-image:
+		linear-gradient(140deg, rgb(52 91 177 / 92%), rgb(43 145 135 / 85%)),
+		radial-gradient(circle at 80% 20%, rgb(255 255 255 / 32%), transparent 42%);
+}
+
+:global(.hero-grid) {
+	display: grid;
+	gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+	:global(.hero-grid) {
+		grid-template-columns: 1.5fr 1fr;
+		align-items: end;
+	}
+}
