@@ -5,14 +5,14 @@
 	--font-sans: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
-:global(html) {
+html {
 	font-family: var(--font-sans);
 	background: var(--bg);
 	color: var(--text-default);
 	text-rendering: optimizeLegibility;
 }
 
-:global(body) {
+body {
 	min-height: 100vh;
 	background:
 		radial-gradient(
@@ -24,7 +24,7 @@
 	color: var(--text-default);
 }
 
-:global(html[data-theme='dark']) {
+html[data-theme='dark'] {
 	--bg: #0a1018;
 	--surface: #121b27;
 	--surface-elevated: #1a2a3d;
@@ -38,8 +38,8 @@
 	--figure-b: #51d6c6;
 }
 
-:global(html:not([data-theme])),
-:global(html[data-theme='light']) {
+html:not([data-theme]),
+html[data-theme='light'] {
 	--bg: #e8eef6;
 	--surface: #f5f8fc;
 	--surface-elevated: #dde6f2;
@@ -53,18 +53,18 @@
 	--figure-b: #1f9f92;
 }
 
-:global(.site-shell) {
+.site-shell {
 	background: color-mix(in oklab, var(--bg) 88%, var(--surface));
 }
 
-:global(.container-shell) {
+.container-shell {
 	margin-inline: auto;
 	width: 100%;
 	max-width: 72rem;
 	padding-inline: 1.5rem;
 }
 
-:global(.card) {
+.card {
 	border: 1px solid color-mix(in oklab, var(--border) 86%, transparent);
 	border-radius: 0.55rem;
 	background: var(--surface);
@@ -74,18 +74,18 @@
 		background-color 170ms ease;
 }
 
-:global(.card:hover) {
+.card:hover {
 	border-color: color-mix(in oklab, var(--accent) 35%, var(--border));
 	box-shadow: 0 10px 30px -22px color-mix(in oklab, var(--accent) 35%, black);
 }
 
-:global(.focus-ring:focus-visible) {
+.focus-ring:focus-visible {
 	outline: 2px solid var(--accent);
 	outline-offset: 2px;
 	border-radius: 0.3rem;
 }
 
-:global(.theme-toggle) {
+.theme-toggle {
 	display: inline-flex;
 	align-items: center;
 	gap: 0.35rem;
@@ -100,25 +100,25 @@
 	transition: all 140ms ease;
 }
 
-:global(.theme-toggle:hover) {
+.theme-toggle:hover {
 	border-color: var(--accent);
 	color: var(--text-strong);
 	background: color-mix(in oklab, var(--surface-elevated) 70%, var(--surface));
 }
 
-:global(.cover-card) {
+.cover-card {
 	background-image:
 		linear-gradient(140deg, rgb(31 102 220 / 92%), rgb(18 124 177 / 88%)),
 		radial-gradient(circle at 80% 20%, rgb(255 255 255 / 18%), transparent 42%);
 }
 
-:global(.hero-grid) {
+.hero-grid {
 	display: grid;
 	gap: 1rem;
 }
 
 @media (min-width: 1080px) {
-	:global(.hero-grid) {
+	.hero-grid {
 		grid-template-columns: 1.7fr 1fr;
 		align-items: start;
 	}
