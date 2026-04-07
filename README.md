@@ -1,42 +1,28 @@
-# sv
+# The Emerging Engineering Investigators Journal (EEIJ)
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A production-ready SvelteKit site for an academic journal publishing mentored STEM research by high school and undergraduate investigators.
 
-## Creating a project
+## Stack
 
-If you're seeing this, you've probably already done this step. Congrats!
+- SvelteKit (TypeScript)
+- Tailwind CSS v4
+- Cloudflare Pages adapter
 
-```sh
-# create a new project
-npx sv create my-app
-```
+## Local development
 
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv@0.14.1 create --template minimal --types ts --add tailwindcss="plugins:typography" sveltekit-adapter="adapter:cloudflare+cfTarget:pages" eslint prettier --install npm .
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
+```bash
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Validation
 
-To create a production version of your app:
-
-```sh
+```bash
+npm run check
+npm run lint
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+## Build target
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Configured for Cloudflare Pages via `@sveltejs/adapter-cloudflare`.
