@@ -2,11 +2,9 @@
 	import { journal, reviewProcess, submissionRequirements } from '$lib/data/journal';
 
 	let submitted = $state(false);
-	let manuscriptId = $state('');
 
 	const handleSubmit = (event: SubmitEvent) => {
 		event.preventDefault();
-		manuscriptId = `JYSE-${new Date().getFullYear()}-${Math.floor(100000 + Math.random() * 900000)}`;
 		submitted = true;
 	};
 </script>
@@ -123,9 +121,8 @@
 			<p
 				class="rounded-md border border-[var(--border)] bg-[var(--surface-elevated)] px-4 py-3 text-sm text-[var(--text-default)]"
 			>
-				Submission received successfully. Manuscript ID: <span class="font-semibold"
-					>{manuscriptId}</span
-				>. A confirmation email has been sent to the corresponding author.
+				Submission received successfully. Your manuscript is now in editorial screening, and a
+				confirmation email with tracking details has been sent to the corresponding author.
 			</p>
 		{/if}
 	</form>
