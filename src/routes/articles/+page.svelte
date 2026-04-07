@@ -15,17 +15,17 @@
 	<title>Articles | {journal.shortName}</title>
 	<meta
 		name="description"
-		content="Browse peer-reviewed engineering articles authored by student investigators and mentors."
+		content="Browse peer-reviewed science and engineering articles in JYSE."
 	/>
 </svelte:head>
 
 <section class="space-y-6">
 	<div class="space-y-3">
-		<p class="text-xs tracking-[0.2em] text-[var(--text-muted)] uppercase">Publications</p>
-		<h1 class="font-serif text-4xl text-[var(--text-strong)]">Articles & Research Papers</h1>
+		<p class="text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase">Publications</p>
+		<h1 class="text-4xl font-semibold text-[var(--text-strong)]">Articles and Research Papers</h1>
 		<p class="max-w-3xl text-sm leading-7 text-[var(--text-default)]">
-			All manuscripts in EEIJ undergo editorial screening and technical peer review focused on
-			rigor, reproducibility, and student-led contribution.
+			All manuscripts undergo editorial screening and double-anonymised peer review for originality,
+			technical quality, relevance, and clarity of reporting.
 		</p>
 	</div>
 
@@ -33,7 +33,7 @@
 		<button
 			type="button"
 			onclick={() => (selectedTag = 'All')}
-			class={`rounded-full border px-4 py-2 text-xs font-medium tracking-wide transition-colors duration-200 ${selectedTag === 'All' ? 'border-[var(--accent)] bg-[var(--accent)] text-[var(--accent-contrast)]' : 'border-[var(--border)] text-[var(--text-default)] hover:border-[var(--accent)]'}`}
+			class={`rounded-sm border px-4 py-2 text-xs font-medium tracking-wide transition-colors duration-150 ${selectedTag === 'All' ? 'border-[var(--accent)] bg-[var(--accent)] text-[var(--accent-contrast)]' : 'border-[var(--border)] text-[var(--text-default)] hover:border-[var(--accent)]'}`}
 		>
 			All Topics
 		</button>
@@ -41,7 +41,7 @@
 			<button
 				type="button"
 				onclick={() => (selectedTag = tag)}
-				class={`rounded-full border px-4 py-2 text-xs font-medium tracking-wide transition-colors duration-200 ${selectedTag === tag ? 'border-[var(--accent)] bg-[var(--accent)] text-[var(--accent-contrast)]' : 'border-[var(--border)] text-[var(--text-default)] hover:border-[var(--accent)]'}`}
+				class={`rounded-sm border px-4 py-2 text-xs font-medium tracking-wide transition-colors duration-150 ${selectedTag === tag ? 'border-[var(--accent)] bg-[var(--accent)] text-[var(--accent-contrast)]' : 'border-[var(--border)] text-[var(--text-default)] hover:border-[var(--accent)]'}`}
 			>
 				{tag}
 			</button>

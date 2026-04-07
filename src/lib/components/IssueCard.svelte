@@ -17,17 +17,17 @@
 
 <article class="card flex h-full flex-col overflow-hidden">
 	<div class="border-b border-[var(--border)] p-5">
-		<div class="cover-card flex min-h-36 items-end rounded-xl p-4">
-			<p class="font-serif text-lg text-white/95">{issue.coverLabel}</p>
+		<div class="cover-card flex min-h-32 items-end rounded-md p-4">
+			<p class="text-base font-medium text-white/95">{issue.coverLabel}</p>
 		</div>
-		<h3 class="mt-4 font-serif text-xl text-[var(--text-strong)]">
+		<h3 class="mt-4 text-xl font-semibold text-[var(--text-strong)]">
 			Volume {issue.volume}, Issue {issue.number}
 		</h3>
 		<p class="mt-1 text-sm text-[var(--text-muted)]">{issue.season} • Published {published}</p>
 		<p class="mt-3 text-sm leading-7 text-[var(--text-default)]">{issue.theme}</p>
 	</div>
 	<div class="p-5">
-		<p class="text-xs tracking-[0.2em] text-[var(--text-muted)] uppercase">
+		<p class="text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase">
 			Articles in this issue
 		</p>
 		<ul class="mt-3 space-y-2 text-sm text-[var(--text-default)]">

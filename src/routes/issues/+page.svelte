@@ -4,17 +4,17 @@
 </script>
 
 <svelte:head>
-	<title>Issues | {journal.shortName}</title>
-	<meta name="description" content="Browse EEIJ issues by volume and publication cycle." />
+	<title>Archives | {journal.shortName}</title>
+	<meta name="description" content="Browse JYSE archives by volume and issue." />
 </svelte:head>
 
 <section class="space-y-6">
 	<div class="space-y-3">
-		<p class="text-xs tracking-[0.2em] text-[var(--text-muted)] uppercase">Archive</p>
-		<h1 class="font-serif text-4xl text-[var(--text-strong)]">Journal Issues</h1>
+		<p class="text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase">Archive</p>
+		<h1 class="text-4xl font-semibold text-[var(--text-strong)]">Journal Archives</h1>
 		<p class="max-w-3xl text-sm leading-7 text-[var(--text-default)]">
-			EEIJ issues are organized by volume and release cycle, with each issue featuring mentored
-			student papers selected through technical peer review.
+			Browse published issues by volume and month. Each issue contains peer-reviewed articles in
+			science, engineering, and technology.
 		</p>
 	</div>
 

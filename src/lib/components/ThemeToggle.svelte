@@ -9,7 +9,7 @@
 	};
 
 	onMount(() => {
-		const savedTheme = localStorage.getItem('eeij-theme');
+		const savedTheme = localStorage.getItem('jyse-theme');
 		if (savedTheme === 'light' || savedTheme === 'dark') {
 			theme = savedTheme;
 		}
@@ -19,7 +19,7 @@
 	const toggleTheme = () => {
 		theme = theme === 'dark' ? 'light' : 'dark';
 		applyTheme(theme);
-		localStorage.setItem('eeij-theme', theme);
+		localStorage.setItem('jyse-theme', theme);
 	};
 </script>
 

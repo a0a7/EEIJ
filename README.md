@@ -1,6 +1,6 @@
-# The Emerging Engineering Investigators Journal (EEIJ)
+# Journal of Young Scientists & Engineers (JYSE)
 
-A production-ready SvelteKit site for an academic journal publishing mentored STEM research by high school and undergraduate investigators.
+A production-ready SvelteKit site for an open-access science and engineering journal.
 
 ## Stack
 
