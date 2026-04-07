@@ -50,7 +50,9 @@ const addUtcDays = (date: Date, delta: number) => {
 const today = new Date();
 const currentBiMonthlyStartMonth = Math.floor(today.getUTCMonth() / 2) * 2;
 const currentBiMonthlyAnchorMonth = currentBiMonthlyStartMonth + 1;
-const currentBiMonthlyAnchor = new Date(Date.UTC(today.getUTCFullYear(), currentBiMonthlyAnchorMonth, 1));
+const currentBiMonthlyAnchor = new Date(
+	Date.UTC(today.getUTCFullYear(), currentBiMonthlyAnchorMonth, 1)
+);
 
 const latestIssueDate = endOfUtcMonth(currentBiMonthlyAnchor);
 const previousIssueDate = endOfUtcMonth(addUtcMonths(currentBiMonthlyAnchor, -1));

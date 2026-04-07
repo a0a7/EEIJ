@@ -1,6 +1,8 @@
 <script lang="ts">
+	/* eslint-disable svelte/no-navigation-without-resolve */
 	import TagPill from '$lib/components/TagPill.svelte';
 	import { journal } from '$lib/data/journal';
+	import type { Author } from '$lib/data/journal';
 	import type { PageData } from './$types';
 
 	let { data } = $props<{ data: PageData }>();
@@ -14,9 +16,11 @@
 	);
 
 	const doiUrl = $derived(`https://doi.org/${data.article.doi}`);
-	const zenodoUrl = $derived(`https://zenodo.org/search?page=1&size=20&q=${encodeURIComponent(data.article.doi)}`);
+	const zenodoUrl = $derived(
+		`https://zenodo.org/search?page=1&size=20&q=${encodeURIComponent(data.article.doi)}`
+	);
 	const citation = $derived(
-		`${data.article.authors.map((author) => author.name).join(', ')} (${new Date(data.article.publishedOn).getFullYear()}). ${data.article.title}. ${journal.name}, ${data.issue.volume}(${data.issue.number}). https://doi.org/${data.article.doi}`
+		`${data.article.authors.map((author: Author) => author.name).join(', ')} (${new Date(data.article.publishedOn).getFullYear()}). ${data.article.title}. ${journal.name}, ${data.issue.volume}(${data.issue.number}). https://doi.org/${data.article.doi}`
 	);
 
 	const getOrcidSearchUrl = (name: string) =>
@@ -53,9 +57,7 @@
 					class="ml-1 text-xs text-[var(--accent)] hover:underline"
 				>
 					ORCID
-				</a>{i < data.article.authors.length - 1
-					? '; '
-					: ''}
+				</a>{i < data.article.authors.length - 1 ? '; ' : ''}
 			{/each}
 		</p>
 		<div class="flex flex-wrap gap-2">
@@ -74,19 +76,19 @@
 		<div class="card p-5">
 			<h2 class="text-2xl font-semibold text-[var(--text-strong)]">Citation</h2>
 			<p class="mt-3 text-sm leading-7 text-[var(--text-default)]">{citation}</p>
-			<p class="mt-3 text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase">
-				Identifiers
-			</p>
+			<p class="mt-3 text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase">Identifiers</p>
 			<div class="mt-2 flex flex-wrap gap-3 text-sm">
-				<a href={doiUrl} target="_blank" rel="noreferrer" class="text-[var(--accent)] hover:underline"
-					>DOI</a
+				<a
+					href={doiUrl}
+					target="_blank"
+					rel="noreferrer"
+					class="text-[var(--accent)] hover:underline">DOI</a
 				>
 				<a
 					href={zenodoUrl}
 					target="_blank"
 					rel="noreferrer"
-					class="text-[var(--accent)] hover:underline"
-					>Zenodo</a
+					class="text-[var(--accent)] hover:underline">Zenodo</a
 				>
 			</div>
 		</div>
