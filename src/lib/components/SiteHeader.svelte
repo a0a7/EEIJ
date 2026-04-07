@@ -28,12 +28,7 @@
 					For emerging researchers in science and engineering
 				</p>
 			</a>
-			<div class="flex items-center gap-3">
-				<a href={resolve('/submit')} class="text-sm text-[var(--accent)] hover:underline">
-					Submit Article
-				</a>
-				<ThemeToggle />
-			</div>
+			<ThemeToggle />
 		</div>
 		<nav aria-label="Primary" class="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
 			{#each navItems as item (item.href)}

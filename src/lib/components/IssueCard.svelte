@@ -24,7 +24,7 @@
 			Volume {issue.volume}, Issue {issue.number}
 		</h3>
 		<p class="mt-1 text-sm text-[var(--text-muted)]">{issue.season} • Published {published}</p>
-		<p class="mt-3 text-sm leading-7 text-[var(--text-default)]">{issue.theme}</p>
+		<p class="mt-3 line-clamp-2 text-sm leading-7 break-words text-[var(--text-default)]">{issue.theme}</p>
 	</div>
 	<div class="p-5">
 		<p class="text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase">
@@ -33,7 +33,10 @@
 		<ul class="mt-3 space-y-2 text-sm text-[var(--text-default)]">
 			{#each issueArticles as article (article.slug)}
 				<li>
-					<a href={resolve(`/articles/${article.slug}`)} class="hover:text-[var(--text-strong)]"
+					<a
+						href={resolve(`/articles/${article.slug}`)}
+						class="block line-clamp-2 break-words hover:text-[var(--text-strong)]"
+					>
 						>{article.title}</a
 					>
 				</li>
