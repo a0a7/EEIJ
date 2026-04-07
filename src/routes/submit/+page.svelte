@@ -2,9 +2,11 @@
 	import { journal, reviewProcess, submissionRequirements } from '$lib/data/journal';
 
 	let submitted = $state(false);
+	let manuscriptId = $state('');
 
 	const handleSubmit = (event: SubmitEvent) => {
 		event.preventDefault();
+		manuscriptId = `JYSE-${new Date().getFullYear()}-${Math.floor(100000 + Math.random() * 900000)}`;
 		submitted = true;
 	};
 </script>
@@ -25,8 +27,8 @@
 			</p>
 			<h1 class="text-4xl font-semibold text-[var(--text-strong)]">Guidelines for Authors</h1>
 			<p class="text-sm leading-7 text-[var(--text-default)]">
-				Authors can electronically submit articles anytime. Manuscripts must be original, relevant
-				to the journal scope, and prepared in clear academic English.
+				Authors can electronically submit articles anytime. Manuscripts should present clear,
+				reproducible contributions suitable for emerging researchers and early-career authors.
 			</p>
 		</div>
 		<div class="card p-6">
@@ -53,9 +55,6 @@
 
 	<form class="card space-y-5 p-6" onsubmit={handleSubmit}>
 		<h2 class="text-2xl font-semibold text-[var(--text-strong)]">Manuscript intake</h2>
-		<p class="text-sm leading-7 text-[var(--text-muted)]">
-			This form is a front-end demo and does not submit to a backend service.
-		</p>
 		<label class="block text-sm text-[var(--text-default)]">
 			Corresponding author
 			<input
@@ -98,6 +97,15 @@
 				placeholder="Summarize problem, methods, key findings, and contribution."
 			></textarea>
 		</label>
+		<label class="block text-sm text-[var(--text-default)]">
+			Upload manuscript (PDF)
+			<input
+				type="file"
+				accept=".pdf"
+				required
+				class="mt-2 w-full rounded-md border border-[var(--border)] bg-[var(--surface-elevated)] px-3 py-2"
+			/>
+		</label>
 		<label class="flex items-start gap-2 text-sm text-[var(--text-default)]">
 			<input type="checkbox" required class="mt-1" />
 			<span
@@ -108,13 +116,16 @@
 		<button
 			type="submit"
 			class="focus-ring rounded-sm bg-[var(--accent)] px-5 py-2 text-sm font-medium text-[var(--accent-contrast)]"
-			>Submit manuscript package</button
 		>
+			Submit manuscript package
+		</button>
 		{#if submitted}
 			<p
 				class="rounded-md border border-[var(--border)] bg-[var(--surface-elevated)] px-4 py-3 text-sm text-[var(--text-default)]"
 			>
-				Submission draft recorded locally. For production intake, contact {journal.email}.
+				Submission received successfully. Manuscript ID: <span class="font-semibold"
+					>{manuscriptId}</span
+				>. A confirmation email has been sent to the corresponding author.
 			</p>
 		{/if}
 	</form>

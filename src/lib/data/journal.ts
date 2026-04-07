@@ -41,9 +41,10 @@ export type BoardMember = {
 export const journal = {
 	name: 'Journal of Young Scientists & Engineers',
 	shortName: 'JYSE',
-	tagline: 'Exploring innovation in science, engineering, and technology.',
+	tagline:
+		'Open-access publishing for emerging researchers in science, engineering, and technology.',
 	description:
-		'JYSE is an open-access, peer-reviewed international journal focused on emerging science and engineering research, methodological quality, and practical impact.',
+		'JYSE is an open-access, peer-reviewed international journal for emerging researchers, with a focus on practical studies suitable for high-school and early undergraduate scholarship.',
 	email: 'editorial@jyse.org',
 	domain: 'https://www.jyse.org',
 	issn: '2319-6378 (Online)',
@@ -66,7 +67,7 @@ export const issues: Issue[] = [
 		number: 6,
 		season: 'May 2026',
 		publicationDate: '2026-05-30',
-		theme: 'Emerging Methods in Engineering and Applied Sciences',
+		theme: 'Student-Led Experiments in Sensors, Energy, and Computing',
 		coverLabel: 'Volume 14 • Issue 6'
 	},
 	{
@@ -75,7 +76,7 @@ export const issues: Issue[] = [
 		number: 5,
 		season: 'April 2026',
 		publicationDate: '2026-04-30',
-		theme: 'Digital Systems, Sustainable Infrastructure, and Materials',
+		theme: 'Applied Engineering Projects for Schools and Early Undergraduates',
 		coverLabel: 'Volume 14 • Issue 5'
 	},
 	{
@@ -84,45 +85,39 @@ export const issues: Issue[] = [
 		number: 4,
 		season: 'March 2026',
 		publicationDate: '2026-03-31',
-		theme: 'AI, Robotics, and Biomedical Engineering',
+		theme: 'Accessible Methods in Robotics, Environment, and Materials',
 		coverLabel: 'Volume 14 • Issue 4'
 	}
 ];
 
 export const articles: Article[] = [
 	{
-		slug: 'low-power-fpga-edge-inference',
-		title: 'Low-Power FPGA Architectures for Edge Inference in Portable Air-Quality Monitors',
+		slug: 'classroom-air-quality-sensor-network',
+		title: 'A Low-Cost Classroom Air-Quality Sensor Network Built with ESP32 Boards',
 		authors: [
 			{
 				name: 'Maya Venkataraman',
 				affiliation: 'Montgomery Blair High School',
 				role: 'Author'
-			},
-			{
-				name: 'Isaac Romero',
-				affiliation: 'University of Maryland, Department of Electrical and Computer Engineering',
-				role: 'Co-author'
 			}
 		],
 		abstract:
-			'This paper benchmarks three quantized convolution pipelines mapped to a mid-range Artix FPGA for on-device particulate matter classification. The proposed architecture reduces dynamic power by 38% compared with baseline kernels while retaining 94.1% classification accuracy. Field tests in school-zone corridors indicate stable latency under variable thermal conditions, supporting deployment in battery-constrained sensing stations.',
-		tags: ['Machine Learning', 'Embedded Systems', 'FPGA'],
+			'This study presents a budget-friendly air-quality monitoring setup for school classrooms using ESP32 microcontrollers and optical dust sensors. The author assembled eight nodes, calibrated them against a reference monitor, and logged PM2.5 values over six weeks. The network achieved an average absolute error of 4.8 µg/m³ after calibration and helped identify ventilation periods associated with elevated particle levels. The work demonstrates an approachable pathway for high-school students to conduct meaningful environmental sensing projects.',
+		tags: ['Environmental Engineering', 'Embedded Systems', 'Sensors'],
 		issueId: 'v14i6',
 		publishedOn: '2026-05-30',
-		doi: '10.35940/jyse.FPGA.2026.140601',
+		doi: '10.35940/jyse.ENV.2026.140601',
 		citation:
-			'Venkataraman, M., & Romero, I. (2026). Low-Power FPGA Architectures for Edge Inference in Portable Air-Quality Monitors. Journal of Young Scientists & Engineers, 14(6), 1-12. https://doi.org/10.35940/jyse.FPGA.2026.140601',
+			'Venkataraman, M. (2026). A Low-Cost Classroom Air-Quality Sensor Network Built with ESP32 Boards. Journal of Young Scientists & Engineers, 14(6), 1-10. https://doi.org/10.35940/jyse.ENV.2026.140601',
 		figure: {
-			title: 'Power-Accuracy Frontier of Candidate FPGA Pipelines',
+			title: 'Sensor Node Accuracy After Two-Point Calibration',
 			caption:
-				'Figure 1 compares synthesized accelerator designs and highlights the proposed architecture as the most efficient operating point for mobile inference workloads.'
+				'Figure 1 compares raw and calibrated PM2.5 readings from the student-built sensor nodes against a reference instrument.'
 		}
 	},
 	{
-		slug: 'microfluidic-cancer-cell-separation',
-		title:
-			'Shear-Stable Microfluidic Channels for Label-Free Separation of Circulating Tumor Cells',
+		slug: 'solar-phone-charging-bench-study',
+		title: 'Benchmarking Portable Solar Phone Charging Kits for Campus Use',
 		authors: [
 			{
 				name: 'Noah Kim',
@@ -131,86 +126,124 @@ export const articles: Article[] = [
 			},
 			{
 				name: 'Eliana Duarte',
-				affiliation: 'Stanford University, Bioengineering',
+				affiliation: 'Stanford University, School of Engineering',
 				role: 'Co-author'
 			}
 		],
 		abstract:
-			'The paper introduces a staircase-herringbone channel geometry designed through CFD iterations and fabricated with two-stage soft lithography. Across donor-matched blood samples, the geometry improved recovery of model tumor cells by 17% over a straight-channel control while maintaining viability above 92%. The study discusses throughput limits and a modular cartridge framework for translational prototyping.',
-		tags: ['Biomedical Engineering', 'Microfluidics'],
+			'The authors evaluate three compact solar charging kits designed for student use in outdoor campus areas. Over twelve clear-sky sessions, they compared charging rate, thermal behavior, and conversion efficiency under controlled load conditions. The best-performing kit delivered 18% higher average charging power than the baseline product and maintained safer operating temperatures through passive heat sinking. The paper provides practical recommendations for schools exploring resilient, low-cost renewable charging infrastructure.',
+		tags: ['Energy', 'Electrical Engineering', 'Sustainability'],
 		issueId: 'v14i6',
 		publishedOn: '2026-05-30',
-		doi: '10.35940/jyse.BIO.2026.140602',
+		doi: '10.35940/jyse.EEE.2026.140602',
 		citation:
-			'Kim, N., & Duarte, E. (2026). Shear-Stable Microfluidic Channels for Label-Free Separation of Circulating Tumor Cells. Journal of Young Scientists & Engineers, 14(6), 13-25. https://doi.org/10.35940/jyse.BIO.2026.140602',
+			'Kim, N., & Duarte, E. (2026). Benchmarking Portable Solar Phone Charging Kits for Campus Use. Journal of Young Scientists & Engineers, 14(6), 11-22. https://doi.org/10.35940/jyse.EEE.2026.140602',
 		figure: {
-			title: 'Velocity Distribution Across Adaptive Channel Segments',
+			title: 'Charging Power vs. Time Across Three Portable Kits',
 			caption:
-				'Figure 2 visualizes laminar flow profiles generated from simulation and validated using particle-image velocimetry in the fabricated prototype.'
+				'Figure 2 shows median output power for each kit measured during repeated noon-time charging trials.'
 		}
 	},
 	{
-		slug: 'community-safe-drone-routing',
-		title: 'Community-Safe Drone Routing with Risk-Aware Graph Optimization',
+		slug: 'rainwater-filter-column-study',
+		title: 'Evaluating Layered Sand-Charcoal Filters for School Rainwater Harvesting Systems',
 		authors: [
 			{
 				name: 'Ana Rodríguez',
-				affiliation: 'Northeastern University, Undergraduate Research Scholars Program',
+				affiliation: 'Northeastern University, First-Year Engineering Program',
 				role: 'Author'
 			},
 			{
 				name: 'Peter Halvorsen',
 				affiliation: 'Northeastern University, Mechanical and Industrial Engineering',
 				role: 'Co-author'
-			}
-		],
-		abstract:
-			'This article develops a weighted graph planner that jointly minimizes travel time, acoustic exposure near schools, and emergency landing scarcity. Using municipal GIS layers and measured propeller signatures, the model reduced aggregate neighborhood disturbance by 24% relative to shortest-path baselines. A transparent policy dashboard is also presented for civic review workflows.',
-		tags: ['Robotics', 'Optimization', 'Civic Systems'],
-		issueId: 'v14i5',
-		publishedOn: '2026-04-30',
-		doi: '10.35940/jyse.ROB.2026.140503',
-		citation:
-			'Rodríguez, A., & Halvorsen, P. (2026). Community-Safe Drone Routing with Risk-Aware Graph Optimization. Journal of Young Scientists & Engineers, 14(5), 34-47. https://doi.org/10.35940/jyse.ROB.2026.140503',
-		figure: {
-			title: 'Risk Heatmap and Selected Flight Corridors',
-			caption:
-				'Figure 3 overlays optimized trajectories on a district risk map combining noise sensitivity, pedestrian density, and emergency landing coverage.'
-		}
-	},
-	{
-		slug: 'recycled-composite-beam-fatigue',
-		title:
-			'Fatigue Characterization of Recycled PET Composite Beams for Low-Cost Bridge Deck Panels',
-		authors: [
-			{
-				name: 'Ethan Clarke',
-				affiliation: 'Georgia Institute of Technology, Civil and Environmental Engineering',
-				role: 'Author'
 			},
 			{
-				name: 'Nadine Al-Khatib',
-				affiliation: 'Georgia Institute of Technology, Civil and Environmental Engineering',
+				name: 'Leila Ahmed',
+				affiliation: 'Raleigh Charter High School',
 				role: 'Co-author'
 			}
 		],
 		abstract:
-			'The authors evaluate a recycled PET-glass composite under one million load cycles to estimate service-life suitability for secondary bridge deck applications. Testing showed progressive stiffness degradation but no catastrophic fracture under a 0.6 design stress ratio. A calibrated Miner-rule model predicts inspection intervals within 8% of observed failure-onset trends.',
-		tags: ['Materials', 'Civil Engineering', 'Sustainability'],
+			'This project compares four layered filter column designs for rainwater harvested from school rooftops. Student researchers measured turbidity, conductivity, and flow rate across 40 test runs using locally available materials. A mixed-media column with gravel, fine sand, and activated charcoal achieved the best balance between clarity improvement and sustainable flow, reducing turbidity by 71% while maintaining practical throughput. The study offers a replicable protocol for classroom-level water treatment investigations.',
+		tags: ['Civil Engineering', 'Environmental Engineering', 'Water Systems'],
 		issueId: 'v14i5',
 		publishedOn: '2026-04-30',
-		doi: '10.35940/jyse.MAT.2026.140504',
+		doi: '10.35940/jyse.CEE.2026.140503',
 		citation:
-			'Clarke, E., & Al-Khatib, N. (2026). Fatigue Characterization of Recycled PET Composite Beams for Low-Cost Bridge Deck Panels. Journal of Young Scientists & Engineers, 14(5), 48-61. https://doi.org/10.35940/jyse.MAT.2026.140504',
+			'Rodríguez, A., Halvorsen, P., & Ahmed, L. (2026). Evaluating Layered Sand-Charcoal Filters for School Rainwater Harvesting Systems. Journal of Young Scientists & Engineers, 14(5), 23-36. https://doi.org/10.35940/jyse.CEE.2026.140503',
 		figure: {
-			title: 'S-N Behavior of Recycled Composite Samples',
+			title: 'Turbidity Reduction Across Column Configurations',
 			caption:
-				'Figure 4 summarizes fatigue life distributions and confidence intervals for three manufacturing conditions.'
+				'Figure 3 summarizes average turbidity outcomes for each filter design tested in the student-built bench setup.'
 		}
 	},
 	{
-		slug: 'solar-desalination-heat-recovery',
-		title: 'Compact Heat-Recovery Strategies for Student-Built Solar Desalination Columns',
+		slug: 'first-year-drone-landing-pad-detection',
+		title: 'Simple Vision Markers for Reliable Drone Landing in Introductory Robotics Labs',
+		authors: [
+			{
+				name: 'Ethan Clarke',
+				affiliation: 'Georgia Institute of Technology, First-Year Engineering',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'This paper investigates low-complexity visual markers for autonomous drone landing exercises in introductory robotics courses. The author tested marker size, contrast, and border thickness using a simulated camera pipeline and indoor quadcopter trials. A high-contrast concentric-square marker reduced average landing error by 27% compared with common QR-pattern references while requiring less processing time. The method is intended for beginner-friendly robotics labs with limited hardware resources.',
+		tags: ['Robotics', 'Computer Vision', 'Education Technology'],
+		issueId: 'v14i5',
+		publishedOn: '2026-04-30',
+		doi: '10.35940/jyse.ROB.2026.140504',
+		citation:
+			'Clarke, E. (2026). Simple Vision Markers for Reliable Drone Landing in Introductory Robotics Labs. Journal of Young Scientists & Engineers, 14(5), 37-46. https://doi.org/10.35940/jyse.ROB.2026.140504',
+		figure: {
+			title: 'Landing Error by Marker Style',
+			caption:
+				'Figure 4 compares median landing offset for marker designs evaluated in simulation and indoor flight tests.'
+		}
+	},
+	{
+		slug: 'bioplastic-film-tensile-tests',
+		title: 'Tensile Testing of Starch-Based Bioplastic Films for School Packaging Prototypes',
+		authors: [
+			{
+				name: 'Sofia Marin',
+				affiliation: 'University of Washington, Engineering Undeclared Program',
+				role: 'Author'
+			},
+			{
+				name: 'Rohan Bedi',
+				affiliation: 'University of Washington, Materials Science and Engineering',
+				role: 'Co-author'
+			},
+			{
+				name: 'Jordan Patel',
+				affiliation: 'Thomas Jefferson High School for Science and Technology',
+				role: 'Co-author'
+			},
+			{
+				name: 'Priya Nair',
+				affiliation: 'Carnegie Mellon University, Biomedical Engineering',
+				role: 'Co-author'
+			}
+		],
+		abstract:
+			'The authors produced starch-based bioplastic films with varying glycerol concentrations and evaluated their tensile behavior for low-load packaging applications. Using a benchtop tensile rig, they measured stress-strain response, elongation at break, and humidity sensitivity. One formulation improved elongation by 34% over the control while maintaining comparable tensile strength. The paper discusses trade-offs between flexibility and moisture resistance in student-manufactured biodegradable materials.',
+		tags: ['Materials Engineering', 'Sustainability', 'Manufacturing'],
+		issueId: 'v14i4',
+		publishedOn: '2026-03-31',
+		doi: '10.35940/jyse.MAT.2026.140405',
+		citation:
+			'Marin, S., Bedi, R., Patel, J., & Nair, P. (2026). Tensile Testing of Starch-Based Bioplastic Films for School Packaging Prototypes. Journal of Young Scientists & Engineers, 14(4), 12-26. https://doi.org/10.35940/jyse.MAT.2026.140405',
+		figure: {
+			title: 'Stress-Strain Curves for Four Film Formulations',
+			caption:
+				'Figure 5 presents representative tensile curves and highlights the formulation with the best strength-flexibility balance.'
+		}
+	},
+	{
+		slug: 'smart-greenhouse-soil-moisture-control',
+		title: 'Rule-Based Soil Moisture Control for a Student-Built Mini Greenhouse',
 		authors: [
 			{
 				name: 'Leila Ahmed',
@@ -224,46 +257,17 @@ export const articles: Article[] = [
 			}
 		],
 		abstract:
-			'This investigation compares low-cost heat-recovery loops integrated into a bench-scale solar still suitable for pre-college laboratory settings. The best-performing loop increased freshwater yield from 2.8 to 3.6 L/m²/day during matched irradiance windows and reduced startup transients by recapturing condenser waste heat. The paper includes uncertainty analysis for salinity sensors and fabrication notes for reproducibility.',
-		tags: ['Energy', 'Thermal Systems', 'Sustainability'],
+			'This paper describes a microcontroller-based irrigation controller for a mini greenhouse used in student agriculture experiments. The system uses threshold rules from soil moisture sensors and ambient temperature readings to schedule pump operation. Over a 30-day basil growth trial, automated control reduced water use by 21% compared with manual watering while maintaining similar plant height and leaf count. The implementation is designed for reproducible deployment in school laboratories.',
+		tags: ['Agricultural Engineering', 'IoT', 'Control Systems'],
 		issueId: 'v14i4',
 		publishedOn: '2026-03-31',
-		doi: '10.35940/jyse.ENE.2026.140405',
+		doi: '10.35940/jyse.AGR.2026.140406',
 		citation:
-			'Ahmed, L., & Choi, M. (2026). Compact Heat-Recovery Strategies for Student-Built Solar Desalination Columns. Journal of Young Scientists & Engineers, 14(4), 10-22. https://doi.org/10.35940/jyse.ENE.2026.140405',
+			'Ahmed, L., & Choi, M. (2026). Rule-Based Soil Moisture Control for a Student-Built Mini Greenhouse. Journal of Young Scientists & Engineers, 14(4), 27-38. https://doi.org/10.35940/jyse.AGR.2026.140406',
 		figure: {
-			title: 'Distillate Yield Under Matched Solar Profiles',
+			title: 'Water Usage and Plant Growth Comparison',
 			caption:
-				'Figure 5 shows measured hourly yield and cumulative output for baseline and heat-recovery-enhanced prototypes.'
-		}
-	},
-	{
-		slug: 'privacy-preserving-campus-occupancy',
-		title: 'Privacy-Preserving Occupancy Estimation for Campus Buildings Using Event Cameras',
-		authors: [
-			{
-				name: 'Sofia Marin',
-				affiliation: 'University of Washington, Computer Science & Engineering',
-				role: 'Author'
-			},
-			{
-				name: 'Rohan Bedi',
-				affiliation: 'University of Washington, Computer Science & Engineering',
-				role: 'Co-author'
-			}
-		],
-		abstract:
-			'The paper reports a lightweight occupancy estimator that uses event-camera motion signatures rather than reconstructing identifiable frames. Evaluated across three campus corridors over four weeks, the method achieved a mean absolute error of 1.4 occupants and reduced personally identifiable data exposure compared with RGB baselines. The authors include deployment guidance for institutions balancing energy optimization with responsible sensing.',
-		tags: ['Computer Vision', 'Privacy', 'Smart Buildings'],
-		issueId: 'v14i4',
-		publishedOn: '2026-03-31',
-		doi: '10.35940/jyse.CS.2026.140406',
-		citation:
-			'Marin, S., & Bedi, R. (2026). Privacy-Preserving Occupancy Estimation for Campus Buildings Using Event Cameras. Journal of Young Scientists & Engineers, 14(4), 23-35. https://doi.org/10.35940/jyse.CS.2026.140406',
-		figure: {
-			title: 'Occupancy Estimation Error Across Deployment Sites',
-			caption:
-				'Figure 6 compares occupancy prediction error and confidence intervals for three sensing locations under variable foot traffic.'
+				'Figure 6 compares cumulative water consumption and growth outcomes between manual and automated irrigation groups.'
 		}
 	}
 ];
