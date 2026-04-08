@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import bookIcon from '$lib/assets/images/book-icon.svg';
+	import webIcon from '$lib/assets/images/web-icon.svg';
 	import ArticleCard from '$lib/components/ArticleCard.svelte';
 	import IssueCard from '$lib/components/IssueCard.svelte';
 	import { articles, importantDates, issues, journal } from '$lib/data/journal';
@@ -32,24 +34,14 @@
 		</p>
 		<div class="grid max-w-3xl gap-2 text-sm text-[var(--text-muted)] md:grid-cols-2">
 			<p class="flex items-center gap-2">
-				<svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4">
-					<path
-						fill="currentColor"
-						d="M5 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14V4H5Zm5 2h7v12h-2V8h-5V6Z"
-					/>
-				</svg>
+				<img src={bookIcon} alt="" aria-hidden="true" class="h-4 w-4" />
 				<span
 					><span class="font-medium text-[var(--text-strong)]">Frequency:</span>
 					{journal.frequency}</span
 				>
 			</p>
 			<p class="flex items-center gap-2">
-				<svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4">
-					<path
-						fill="currentColor"
-						d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm6.92 9h-2.95a15.91 15.91 0 0 0-1.2-5.09A8.03 8.03 0 0 1 18.92 11Zm-6.92 9a13.7 13.7 0 0 1-2-7 13.7 13.7 0 0 1 2-7 13.7 13.7 0 0 1 2 7 13.7 13.7 0 0 1-2 7Zm-2.77-14.09A15.91 15.91 0 0 0 8.03 11H5.08a8.03 8.03 0 0 1 4.15-5.09ZM5.08 13h2.95a15.91 15.91 0 0 0 1.2 5.09A8.03 8.03 0 0 1 5.08 13Zm9.69 5.09a15.91 15.91 0 0 0 1.2-5.09h2.95a8.03 8.03 0 0 1-4.15 5.09Z"
-					/>
-				</svg>
+				<img src={webIcon} alt="" aria-hidden="true" class="h-4 w-4" />
 				<span
 					><span class="font-medium text-[var(--text-strong)]">Website:</span>
 					{journal.domain}</span

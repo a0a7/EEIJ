@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import searchIcon from '$lib/assets/images/search-icon.svg';
 	import { tick } from 'svelte';
 
 	type NavHref = '/' | '/articles' | '/issues' | '/submit' | '/about' | '/editorial-board';
@@ -54,16 +55,17 @@
 								if (event.key === 'Escape') closeSearch();
 							}}
 						/>
+						<img src={searchIcon} alt="" aria-hidden="true" class="h-3.5 w-3.5 opacity-75" />
 						<button
 							type="submit"
-							class="px-1 text-xs font-medium text-[var(--text-default)] hover:text-[var(--text-strong)]"
+							class="cursor-pointer px-1 text-xs font-medium text-[var(--text-default)] hover:text-[var(--text-strong)]"
 						>
 							Go
 						</button>
 						<button
 							type="button"
 							onclick={closeSearch}
-							class="px-1 text-xs font-medium text-[var(--text-default)] hover:text-[var(--text-strong)]"
+							class="cursor-pointer px-1 text-xs font-medium text-[var(--text-default)] hover:text-[var(--text-strong)]"
 							aria-label="Close search"
 						>
 							✕

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import footerLogo from '$lib/assets/images/footer-logo-square.svg';
 </script>
 
 <footer class="site-shell mt-16 border-t border-[var(--border)]">
@@ -7,12 +8,11 @@
 		class="container-shell grid grid-cols-1 gap-8 py-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr]"
 	>
 		<div class="space-y-2">
-			<div
-				class="flex h-20 w-20 items-center justify-center rounded-sm border border-[var(--border)] bg-[var(--surface)] text-[10px] font-semibold tracking-[0.1em] text-[var(--text-muted)] uppercase"
-				aria-label="Placeholder square logo"
-			>
-				Logo
-			</div>
+			<img
+				src={footerLogo}
+				alt="Placeholder square logo"
+				class="h-20 w-20 border border-[var(--border)]"
+			/>
 			<h2 class="text-lg font-semibold text-[var(--text-strong)]">
 				Journal of Young Scientists & Engineers
 			</h2>
