@@ -408,32 +408,32 @@ export const articles: Article[] = [
 
 export const editorialBoard: BoardMember[] = [
 	{
-		name: 'Dr. Martin K. Hughes',
+		name: 'Martin K. Hughes',
 		role: 'Editor-in-Chief',
 		affiliation: 'Northbridge Institute of Technology',
 		interests: ['Applied Physics', 'Instrumentation', 'Research Methods'],
-		bio: 'Oversees editorial quality and review consistency, with a focus on practical experimental design and measurement reliability.'
+		bio: 'Oversees editorial quality and review consistency, with a focus on practical experimental design and measurement reliability. Holds a PhD in Applied Physics.'
 	},
 	{
 		name: 'Elena Morales',
 		role: 'Managing Editor',
 		affiliation: 'Riverton College',
 		interests: ['Scientific Writing', 'Publication Ethics', 'Peer Review Workflows'],
-		bio: 'Coordinates editorial operations and supports clear, fair peer-review communication across subject sections.'
+		bio: 'Coordinates editorial operations and supports clear, fair peer-review communication across subject sections. Holds an MSc in Communication and does not hold a PhD.'
 	},
 	{
 		name: 'Omar N. Rahman',
 		role: 'Associate Editor (Materials & Devices)',
 		affiliation: 'Coastal Polytechnic University',
 		interests: ['Materials Science', 'Device Prototyping', 'Testing Standards'],
-		bio: 'Handles materials and device submissions, emphasizing reproducible prototyping and transparent evaluation criteria.'
+		bio: 'Handles materials and device submissions, emphasizing reproducible prototyping and transparent evaluation criteria. Holds an MEng in Materials Engineering and does not hold a PhD.'
 	},
 	{
 		name: 'Daniel Park',
 		role: 'Associate Editor (Robotics & Learning Systems)',
 		affiliation: 'Lakeview School of Engineering',
 		interests: ['Robotics', 'Embedded Systems', 'Engineering Education'],
-		bio: 'Leads review handling for robotics and learning systems, with emphasis on classroom-ready engineering applications.'
+		bio: 'Leads review handling for robotics and learning systems, with emphasis on classroom-ready engineering applications. Holds an MSc in Embedded Systems and does not hold a PhD.'
 	}
 ];
 
