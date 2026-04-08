@@ -1,5 +1,4 @@
 <script lang="ts">
-	/* eslint-disable svelte/no-navigation-without-resolve -- external DOI/Zenodo/ORCID URLs are data-driven and cannot be statically wrapped with resolve() */
 	import TagPill from '$lib/components/TagPill.svelte';
 	import { journal } from '$lib/data/journal';
 	import type { Author } from '$lib/data/journal';
@@ -50,6 +49,7 @@
 			{#each data.article.authors as author, i (author.name)}
 				<span class="font-medium text-[var(--text-strong)]">{author.name}</span>
 				<span> ({author.role}) — {author.affiliation}</span>
+				<!-- eslint-disable svelte/no-navigation-without-resolve -->
 				<a
 					href={getOrcidSearchUrl(author.name)}
 					target="_blank"
@@ -57,7 +57,11 @@
 					class="ml-1 text-xs text-[var(--accent)] hover:underline"
 				>
 					ORCID
-				</a>{i < data.article.authors.length - 1 ? '; ' : ''}
+				</a>
+				<!-- eslint-enable svelte/no-navigation-without-resolve -->{i <
+				data.article.authors.length - 1
+					? '; '
+					: ''}
 			{/each}
 		</p>
 		<div class="flex flex-wrap gap-2">
@@ -78,18 +82,22 @@
 			<p class="mt-3 text-sm leading-7 text-[var(--text-default)]">{citation}</p>
 			<p class="mt-3 text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase">Identifiers</p>
 			<div class="mt-2 flex flex-wrap gap-3 text-sm">
+				<!-- eslint-disable svelte/no-navigation-without-resolve -->
 				<a
 					href={doiUrl}
 					target="_blank"
 					rel="noreferrer"
 					class="text-[var(--accent)] hover:underline">DOI</a
 				>
+				<!-- eslint-enable svelte/no-navigation-without-resolve -->
+				<!-- eslint-disable svelte/no-navigation-without-resolve -->
 				<a
 					href={zenodoUrl}
 					target="_blank"
 					rel="noreferrer"
 					class="text-[var(--accent)] hover:underline">Zenodo</a
 				>
+				<!-- eslint-enable svelte/no-navigation-without-resolve -->
 			</div>
 		</div>
 		<div class="card p-5">
@@ -106,6 +114,7 @@
 				>
 					Download PDF
 				</a>
+				<!-- eslint-disable svelte/no-navigation-without-resolve -->
 				<a
 					href={doiUrl}
 					target="_blank"
@@ -114,6 +123,7 @@
 				>
 					View DOI record
 				</a>
+				<!-- eslint-enable svelte/no-navigation-without-resolve -->
 			</div>
 		</div>
 	</section>
