@@ -408,32 +408,32 @@ export const articles: Article[] = [
 
 export const editorialBoard: BoardMember[] = [
 	{
-		name: 'Martin K. Hughes',
+		name: 'Dr. Matthew Lease',
 		role: 'Editor-in-Chief',
-		affiliation: 'Northbridge Institute of Technology',
+		affiliation: 'The University of Texas at Austin',
 		interests: ['Applied Physics', 'Instrumentation', 'Research Methods'],
-		bio: 'Oversees editorial quality and review consistency, with a focus on practical experimental design and measurement reliability. Holds a PhD in Applied Physics.'
+		bio: 'Oversees editorial quality and review consistency, with a focus on practical experimental design and responsible AI methods. Highest degree: PhD.'
 	},
 	{
-		name: 'Elena Morales',
+		name: 'Elena Petrova',
 		role: 'Managing Editor',
-		affiliation: 'Riverton College',
+		affiliation: 'University of Glasgow',
 		interests: ['Scientific Writing', 'Publication Ethics', 'Peer Review Workflows'],
-		bio: 'Coordinates editorial operations and supports clear, fair peer-review communication across subject sections. Highest degree: MSc in Communication.'
+		bio: 'Coordinates editorial operations and supports clear, fair peer-review communication across subject sections. Highest degree: MSc.'
 	},
 	{
-		name: 'Omar N. Rahman',
+		name: 'Omar Al-Hassan',
 		role: 'Associate Editor (Materials & Devices)',
-		affiliation: 'Coastal Polytechnic University',
+		affiliation: 'University of Portsmouth',
 		interests: ['Materials Science', 'Device Prototyping', 'Testing Standards'],
-		bio: 'Handles materials and device submissions, emphasizing reproducible prototyping and transparent evaluation criteria. Highest degree: MEng in Materials Engineering.'
+		bio: 'Handles materials and device submissions, emphasizing reproducible prototyping and transparent evaluation criteria. Highest degree: MEng.'
 	},
 	{
-		name: 'Daniel Park',
+		name: 'James R. Walker',
 		role: 'Associate Editor (Robotics & Learning Systems)',
-		affiliation: 'Lakeview School of Engineering',
+		affiliation: 'University of Leeds',
 		interests: ['Robotics', 'Embedded Systems', 'Engineering Education'],
-		bio: 'Leads review handling for robotics and learning systems, with emphasis on classroom-ready engineering applications. Highest degree: MSc in Embedded Systems.'
+		bio: 'Leads review handling for robotics and learning systems, with emphasis on classroom-ready engineering applications. Highest degree: MSc.'
 	}
 ];
 
