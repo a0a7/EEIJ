@@ -204,9 +204,9 @@ const articleSeedData: Article[] = [
 		tags: ['Handwritten Text Recognition', 'Machine Learning', 'Shorthand'],
 		issueId: 'v13i11',
 		publishedOn: '2025-12-09',
-		doi: '',
+		doi: '10.31224/4661',
 		citation:
-			'Weimer, A. (2025). Error-corrected deep learning approach to handwritten text recognition of Gregg shorthand. Journal of Young Scientists & Engineers, 13(11). DOI pending assignment.',
+			'Weimer, A. (2025). Error-corrected deep learning approach to handwritten text recognition of Gregg shorthand. Journal of Young Scientists & Engineers, 13(11). https://doi.org/10.31224/4661',
 		figure: {
 			title: 'Training and Validation Accuracy',
 			caption:

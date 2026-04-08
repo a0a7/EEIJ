@@ -40,6 +40,24 @@
 <svelte:head>
 	<title>{data.article.title} | {journal.shortName}</title>
 	<meta name="description" content={data.article.abstract.slice(0, 150)} />
+	<meta name="citation_title" content={data.article.title} />
+	{#each data.article.authors as author (author.name)}
+		<meta name="citation_author" content={author.name} />
+	{/each}
+	<meta name="citation_publication_date" content={data.article.publishedOn.replace(/-/g, '/')} />
+	<meta name="citation_journal_title" content={journal.name} />
+	<meta name="citation_volume" content={String(data.issue.volume)} />
+	<meta name="citation_issue" content={String(data.issue.number)} />
+	<meta name="citation_firstpage" content="1" />
+	<meta name="citation_lastpage" content="5" />
+	{#if data.article.doi}
+		<meta name="citation_doi" content={data.article.doi} />
+	{/if}
+	<meta name="citation_publisher" content={journal.publisher} />
+	{#each data.article.tags as tag (tag)}
+		<meta name="citation_keywords" content={tag} />
+	{/each}
+	<meta name="citation_pdf_url" content={pdfUrl} />
 </svelte:head>
 
 <article class="mx-auto max-w-6xl lg:grid lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-8">
@@ -48,7 +66,7 @@
 			<p class="text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase">
 				Volume {data.issue.volume}, Issue {data.issue.number} • {published}
 			</p>
-						<p
+			<p
 				class="inline-flex flex-wrap items-center gap-2 text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase"
 			>
 				<span>Open access • CC BY-NC-SA 4.0 • doi:10.31224/4661</span>
@@ -58,8 +76,8 @@
 					<TagPill {tag} />
 				{/each}
 			</div>
-			
-			<h1 class="text-4xl pb-6 leading-tight font-semibold text-[var(--text-strong)] md:text-5xl">
+
+			<h1 class="pb-6 text-4xl leading-tight font-semibold text-[var(--text-strong)] md:text-5xl">
 				{data.article.title}
 			</h1>
 			<p class="text-sm leading-4 text-[var(--text-default)]">
@@ -116,7 +134,6 @@
 						: ''}
 				{/each}
 			</p>
-
 		</header>
 
 		<section id="abstract" class="space-y-3">
