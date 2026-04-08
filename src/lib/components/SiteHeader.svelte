@@ -76,7 +76,7 @@
 					<button
 						type="button"
 						onclick={openSearch}
-						class="text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
+						class="cursor-pointer text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
 					>
 						Search
 					</button>
