@@ -145,7 +145,7 @@ export const issues: Issue[] = [
 	}
 ];
 
-export const articles: Article[] = [
+const articleSeedData: Article[] = [
 	{
 		slug: 'error-corrected-deep-learning-gregg-shorthand',
 		title:
@@ -437,8 +437,709 @@ export const articles: Article[] = [
 			caption:
 				'Figure 8 compares performance across federated aggregation strategies under varying client-availability conditions.'
 		}
+	},
+	{
+		slug: 'autonomous-crop-row-following-mini-rover',
+		title: 'Autonomous Crop-Row Following with a Mini Rover for School Field Plots',
+		authors: [
+			{
+				name: 'Noah Kim',
+				affiliation: 'Palo Alto High School',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'This study evaluates a lightweight vision and control stack for autonomous row-following in small student-managed crop plots. The rover maintained stable tracking across mixed lighting conditions and reduced manual guidance time during routine field observations.',
+		tags: ['Robotics', 'Computer Vision', 'Agricultural Engineering'],
+		issueId: 'v14i6',
+		publishedOn: toIsoDateString(latestIssueDate),
+		doi: '10.35940/jyse.ROB.2026.140604',
+		citation:
+			'Kim, N. (2026). Autonomous Crop-Row Following with a Mini Rover for School Field Plots. Journal of Young Scientists & Engineers, 14(6), 36-44. https://doi.org/10.35940/jyse.ROB.2026.140604',
+		figure: {
+			title: 'Row-Tracking Error by Lighting Condition',
+			caption: 'Figure 9 shows lateral tracking error measured in morning, noon, and evening runs.'
+		}
+	},
+	{
+		slug: 'low-power-campus-water-leak-detector',
+		title: 'Low-Power Campus Water Leak Detection with Edge Acoustic Sensing',
+		authors: [
+			{
+				name: 'Maya Venkataraman',
+				affiliation: 'Montgomery Blair High School',
+				role: 'Author'
+			},
+			{
+				name: 'Nadia Torres',
+				affiliation: 'University of California, Davis',
+				role: 'Co-author'
+			}
+		],
+		abstract:
+			'The authors present an edge-acoustic pipeline for identifying leak-like signatures in campus utility lines using low-power microphone nodes. The approach improved early event detection while keeping battery consumption within practical maintenance windows.',
+		tags: ['Embedded Systems', 'Signal Processing', 'Smart Infrastructure'],
+		issueId: 'v14i6',
+		publishedOn: toIsoDateString(latestIssueDate),
+		doi: '10.35940/jyse.IOT.2026.140605',
+		citation:
+			'Venkataraman, M., & Torres, N. (2026). Low-Power Campus Water Leak Detection with Edge Acoustic Sensing. Journal of Young Scientists & Engineers, 14(6), 45-54. https://doi.org/10.35940/jyse.IOT.2026.140605',
+		figure: {
+			title: 'Detection Precision Across Pipe Sections',
+			caption:
+				'Figure 10 compares leak detection precision and recall across indoor and outdoor utility segments.'
+		}
+	},
+	{
+		slug: 'gantry-3d-printer-vibration-compensation',
+		title: 'Vibration Compensation Profiles for Student-Built Gantry 3D Printers',
+		authors: [
+			{
+				name: 'Ethan Clarke',
+				affiliation: 'Georgia Institute of Technology, First-Year Engineering',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'This paper tests motion-profile tuning and software compensation methods for reducing ringing artifacts in open-frame gantry printers. A simple calibration routine lowered edge ghosting and improved dimensional consistency in repeated benchmark prints.',
+		tags: ['Manufacturing', 'Control Systems', 'Mechanical Engineering'],
+		issueId: 'v14i6',
+		publishedOn: toIsoDateString(latestIssueDate),
+		doi: '10.35940/jyse.MFG.2026.140606',
+		citation:
+			'Clarke, E. (2026). Vibration Compensation Profiles for Student-Built Gantry 3D Printers. Journal of Young Scientists & Engineers, 14(6), 55-63. https://doi.org/10.35940/jyse.MFG.2026.140606',
+		figure: {
+			title: 'Surface Ringing Before and After Tuning',
+			caption: 'Figure 11 reports ringing amplitude across three compensation profiles.'
+		}
+	},
+	{
+		slug: 'student-built-microgrid-load-forecasting',
+		title: 'Short-Horizon Load Forecasting for a Student-Built Campus Microgrid',
+		authors: [
+			{
+				name: 'Eliana Duarte',
+				affiliation: 'Stanford University, School of Engineering',
+				role: 'Author'
+			},
+			{
+				name: 'Jordan Patel',
+				affiliation: 'Thomas Jefferson High School for Science and Technology',
+				role: 'Co-author'
+			}
+		],
+		abstract:
+			'The study compares linear and tree-based forecasting models for 15-minute campus microgrid demand prediction. The selected model reduced forecast error during peak transitions and supported safer battery dispatch planning.',
+		tags: ['Energy', 'Machine Learning', 'Electrical Engineering'],
+		issueId: 'v14i6',
+		publishedOn: toIsoDateString(latestIssueDate),
+		doi: '10.35940/jyse.EEE.2026.140607',
+		citation:
+			'Duarte, E., & Patel, J. (2026). Short-Horizon Load Forecasting for a Student-Built Campus Microgrid. Journal of Young Scientists & Engineers, 14(6), 64-73. https://doi.org/10.35940/jyse.EEE.2026.140607',
+		figure: {
+			title: 'Forecast Error Distribution by Model',
+			caption: 'Figure 12 compares MAPE and peak-event errors across baseline and tuned models.'
+		}
+	},
+	{
+		slug: 'wearable-emg-gesture-classifier',
+		title: 'Wearable EMG Gesture Classification for Introductory Assistive Interfaces',
+		authors: [
+			{
+				name: 'Priya Nair',
+				affiliation: 'Carnegie Mellon University, Biomedical Engineering',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'This work evaluates a low-cost wearable EMG band for classifying hand gestures in student assistive-interface projects. A compact classifier achieved robust performance on five gestures with minimal calibration time.',
+		tags: ['Biomedical Engineering', 'Machine Learning', 'Signal Processing'],
+		issueId: 'v14i6',
+		publishedOn: toIsoDateString(latestIssueDate),
+		doi: '10.35940/jyse.BME.2026.140608',
+		citation:
+			'Nair, P. (2026). Wearable EMG Gesture Classification for Introductory Assistive Interfaces. Journal of Young Scientists & Engineers, 14(6), 74-82. https://doi.org/10.35940/jyse.BME.2026.140608',
+		figure: {
+			title: 'Confusion Matrix for Five Gesture Classes',
+			caption:
+				'Figure 13 summarizes gesture-level precision and recall after feature normalization.'
+		}
+	},
+	{
+		slug: 'low-cost-river-ph-mapper',
+		title: 'Low-Cost River pH Mapping with Student-Deployed Drifting Sensor Pods',
+		authors: [
+			{
+				name: 'Leila Ahmed',
+				affiliation: 'Raleigh Charter High School',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'The author developed floating sensor pods to map pH variation along short river sections used in school field studies. Repeated deployments showed stable calibration and revealed consistent local gradients near drainage inlets.',
+		tags: ['Environmental Monitoring', 'Sensors', 'Water Systems'],
+		issueId: 'v14i6',
+		publishedOn: toIsoDateString(latestIssueDate),
+		doi: '10.35940/jyse.ENV.2026.140609',
+		citation:
+			'Ahmed, L. (2026). Low-Cost River pH Mapping with Student-Deployed Drifting Sensor Pods. Journal of Young Scientists & Engineers, 14(6), 83-91. https://doi.org/10.35940/jyse.ENV.2026.140609',
+		figure: {
+			title: 'pH Heatmap Along Sample Transects',
+			caption: 'Figure 14 presents interpolated pH values across repeated downstream sampling runs.'
+		}
+	},
+	{
+		slug: 'classroom-seismic-alert-node-benchmark',
+		title: 'Benchmarking Classroom Seismic Alert Nodes for Rapid Event Notification',
+		authors: [
+			{
+				name: 'Sofia Marin',
+				affiliation: 'University of Washington, Engineering Undeclared Program',
+				role: 'Author'
+			},
+			{
+				name: 'Rohan Bedi',
+				affiliation: 'University of Washington, Materials Science and Engineering',
+				role: 'Co-author'
+			}
+		],
+		abstract:
+			'This study benchmarks low-cost accelerometer nodes configured for classroom seismic alert prototypes. The best setup balanced sensitivity and false-alert control while preserving low-latency messaging performance.',
+		tags: ['Sensors', 'Embedded Systems', 'Safety Engineering'],
+		issueId: 'v14i6',
+		publishedOn: toIsoDateString(latestIssueDate),
+		doi: '10.35940/jyse.SEN.2026.140610',
+		citation:
+			'Marin, S., & Bedi, R. (2026). Benchmarking Classroom Seismic Alert Nodes for Rapid Event Notification. Journal of Young Scientists & Engineers, 14(6), 92-101. https://doi.org/10.35940/jyse.SEN.2026.140610',
+		figure: {
+			title: 'Alert Latency by Threshold Profile',
+			caption:
+				'Figure 15 compares event alert latency and false-trigger rates across node profiles.'
+		}
+	},
+	{
+		slug: 'compact-hydrogen-electrolyzer-safety-study',
+		title: 'Safety Characterization of a Compact Educational Hydrogen Electrolyzer',
+		authors: [
+			{
+				name: 'Peter Halvorsen',
+				affiliation: 'Northeastern University, Mechanical and Industrial Engineering',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'The author reports temperature, pressure, and gas-flow behavior for a compact electrolyzer used in supervised student labs. The resulting safety envelope supports repeatable operation guidance for introductory clean-energy demonstrations.',
+		tags: ['Energy', 'Safety Engineering', 'Chemical Engineering'],
+		issueId: 'v14i6',
+		publishedOn: toIsoDateString(latestIssueDate),
+		doi: '10.35940/jyse.CHE.2026.140611',
+		citation:
+			'Halvorsen, P. (2026). Safety Characterization of a Compact Educational Hydrogen Electrolyzer. Journal of Young Scientists & Engineers, 14(6), 102-111. https://doi.org/10.35940/jyse.CHE.2026.140611',
+		figure: {
+			title: 'Operational Safety Envelope',
+			caption:
+				'Figure 16 maps measured pressure-temperature regions observed during controlled electrolyzer runs.'
+		}
+	},
+	{
+		slug: 'recycled-asphalt-brick-compression-tests',
+		title: 'Compression Testing of Recycled Asphalt-Brick Blends for Walkway Prototypes',
+		authors: [
+			{
+				name: 'Ana Rodríguez',
+				affiliation: 'Northeastern University, First-Year Engineering Program',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'This paper evaluates compressive strength and water absorption of walkway bricks produced with recycled asphalt fractions. A mid-range blend achieved favorable strength-retention trade-offs for low-load pedestrian use.',
+		tags: ['Civil Engineering', 'Sustainability', 'Materials Engineering'],
+		issueId: 'v14i5',
+		publishedOn: toIsoDateString(previousIssueDate),
+		doi: '10.35940/jyse.CEE.2026.140506',
+		citation:
+			'Rodríguez, A. (2026). Compression Testing of Recycled Asphalt-Brick Blends for Walkway Prototypes. Journal of Young Scientists & Engineers, 14(5), 59-67. https://doi.org/10.35940/jyse.CEE.2026.140506',
+		figure: {
+			title: 'Compressive Strength by Blend Ratio',
+			caption:
+				'Figure 17 compares mean compressive strength and variance across recycled-content groups.'
+		}
+	},
+	{
+		slug: 'image-based-leaf-disease-screening',
+		title: 'Image-Based Leaf Disease Screening with Lightweight Classroom Models',
+		authors: [
+			{
+				name: 'Megan Choi',
+				affiliation: 'North Carolina State University, Chemical and Biomolecular Engineering',
+				role: 'Author'
+			},
+			{
+				name: 'Leila Ahmed',
+				affiliation: 'Raleigh Charter High School',
+				role: 'Co-author'
+			}
+		],
+		abstract:
+			'The authors benchmark compact image-classification models for early leaf-disease screening in school greenhouse setups. The best model improved macro-F1 under class imbalance while remaining deployable on low-cost devices.',
+		tags: ['Machine Learning', 'Agricultural Engineering', 'Computer Vision'],
+		issueId: 'v14i5',
+		publishedOn: toIsoDateString(previousIssueDate),
+		doi: '10.35940/jyse.AIML.2026.140507',
+		citation:
+			'Choi, M., & Ahmed, L. (2026). Image-Based Leaf Disease Screening with Lightweight Classroom Models. Journal of Young Scientists & Engineers, 14(5), 68-77. https://doi.org/10.35940/jyse.AIML.2026.140507',
+		figure: {
+			title: 'Model Performance by Disease Class',
+			caption:
+				'Figure 18 summarizes per-class precision and recall for compact convolutional baselines.'
+		}
+	},
+	{
+		slug: 'acoustic-panel-reverberation-measurements',
+		title: 'Reverberation Measurements for DIY Acoustic Panels in Small Classrooms',
+		authors: [
+			{
+				name: 'Jordan Patel',
+				affiliation: 'Thomas Jefferson High School for Science and Technology',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'This work measures reverberation-time reduction from low-cost acoustic panel designs assembled by students. Results identify panel spacing and placement patterns that deliver the largest speech-intelligibility improvements.',
+		tags: ['Acoustics', 'Civil Engineering', 'Education Technology'],
+		issueId: 'v14i5',
+		publishedOn: toIsoDateString(previousIssueDate),
+		doi: '10.35940/jyse.ACO.2026.140508',
+		citation:
+			'Patel, J. (2026). Reverberation Measurements for DIY Acoustic Panels in Small Classrooms. Journal of Young Scientists & Engineers, 14(5), 78-86. https://doi.org/10.35940/jyse.ACO.2026.140508',
+		figure: {
+			title: 'RT60 Reduction Across Panel Layouts',
+			caption: 'Figure 19 reports RT60 outcomes for four panel density and spacing configurations.'
+		}
+	},
+	{
+		slug: 'open-source-spectrometer-calibration',
+		title: 'Calibration Workflow for an Open-Source Classroom Spectrometer',
+		authors: [
+			{
+				name: 'Nadia Torres',
+				affiliation: 'University of California, Davis',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'The paper presents a wavelength and intensity calibration workflow for a student-assembled open-source spectrometer. The procedure improved repeatability across sessions and reduced cross-device measurement drift.',
+		tags: ['Instrumentation', 'Optics', 'Experimental Methods'],
+		issueId: 'v14i5',
+		publishedOn: toIsoDateString(previousIssueDate),
+		doi: '10.35940/jyse.OPT.2026.140509',
+		citation:
+			'Torres, N. (2026). Calibration Workflow for an Open-Source Classroom Spectrometer. Journal of Young Scientists & Engineers, 14(5), 87-95. https://doi.org/10.35940/jyse.OPT.2026.140509',
+		figure: {
+			title: 'Wavelength Error Before/After Calibration',
+			caption: 'Figure 20 compares peak-location error across reference emission lines.'
+		}
+	},
+	{
+		slug: 'solar-desalination-wick-material-comparison',
+		title: 'Comparing Wick Materials for Passive Solar Desalination Prototypes',
+		authors: [
+			{
+				name: 'Ana Rodríguez',
+				affiliation: 'Northeastern University, First-Year Engineering Program',
+				role: 'Author'
+			},
+			{
+				name: 'Peter Halvorsen',
+				affiliation: 'Northeastern University, Mechanical and Industrial Engineering',
+				role: 'Co-author'
+			}
+		],
+		abstract:
+			'This study compares wick materials for passive solar stills used in educational desalination demonstrations. A cotton-cellulose blend improved distillate output while maintaining stable long-run capillary transport.',
+		tags: ['Water Systems', 'Sustainability', 'Thermal Analysis'],
+		issueId: 'v14i5',
+		publishedOn: toIsoDateString(previousIssueDate),
+		doi: '10.35940/jyse.ENV.2026.140510',
+		citation:
+			'Rodríguez, A., & Halvorsen, P. (2026). Comparing Wick Materials for Passive Solar Desalination Prototypes. Journal of Young Scientists & Engineers, 14(5), 96-105. https://doi.org/10.35940/jyse.ENV.2026.140510',
+		figure: {
+			title: 'Daily Distillate Yield by Wick Type',
+			caption: 'Figure 21 reports desalination output normalized by incident solar energy.'
+		}
+	},
+	{
+		slug: 'lidar-hallway-navigation-benchmark',
+		title: 'Lidar-Based Hallway Navigation Benchmark for Educational Indoor Robots',
+		authors: [
+			{
+				name: 'Ethan Clarke',
+				affiliation: 'Georgia Institute of Technology, First-Year Engineering',
+				role: 'Author'
+			},
+			{
+				name: 'Maya Venkataraman',
+				affiliation: 'Montgomery Blair High School',
+				role: 'Co-author'
+			}
+		],
+		abstract:
+			'The authors benchmark reactive and map-based navigation stacks on a standardized hallway course for student robotics teams. The selected configuration reduced collision events while preserving traversal speed under clutter.',
+		tags: ['Robotics', 'Sensors', 'Control Systems'],
+		issueId: 'v14i5',
+		publishedOn: toIsoDateString(previousIssueDate),
+		doi: '10.35940/jyse.ROB.2026.140511',
+		citation:
+			'Clarke, E., & Venkataraman, M. (2026). Lidar-Based Hallway Navigation Benchmark for Educational Indoor Robots. Journal of Young Scientists & Engineers, 14(5), 106-115. https://doi.org/10.35940/jyse.ROB.2026.140511',
+		figure: {
+			title: 'Completion Time and Collision Rate',
+			caption: 'Figure 22 compares navigation performance across three hallway obstacle scenarios.'
+		}
+	},
+	{
+		slug: 'biodegradable-foam-density-optimization',
+		title: 'Density Optimization of Biodegradable Packing Foam from Starch Blends',
+		authors: [
+			{
+				name: 'Sofia Marin',
+				affiliation: 'University of Washington, Engineering Undeclared Program',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'This work explores starch-additive ratios for producing biodegradable foam inserts with controlled density. A narrow formulation window improved cushioning efficiency without major moisture stability losses.',
+		tags: ['Materials Engineering', 'Sustainability', 'Manufacturing'],
+		issueId: 'v14i4',
+		publishedOn: toIsoDateString(olderIssueDate),
+		doi: '10.35940/jyse.MAT.2026.140408',
+		citation:
+			'Marin, S. (2026). Density Optimization of Biodegradable Packing Foam from Starch Blends. Journal of Young Scientists & Engineers, 14(4), 53-61. https://doi.org/10.35940/jyse.MAT.2026.140408',
+		figure: {
+			title: 'Foam Density vs. Expansion Ratio',
+			caption: 'Figure 23 shows density and compression recovery across tested starch formulations.'
+		}
+	},
+	{
+		slug: 'school-lab-co2-capture-column',
+		title: 'Bench-Scale CO2 Capture Column for School Laboratory Demonstrations',
+		authors: [
+			{
+				name: 'Megan Choi',
+				affiliation: 'North Carolina State University, Chemical and Biomolecular Engineering',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'The paper presents a compact packed-column setup for demonstrating gas absorption fundamentals with safe instructional materials. Students observed clear concentration changes and pressure-drop trends suitable for course labs.',
+		tags: ['Chemical Engineering', 'Environmental Engineering', 'Instrumentation'],
+		issueId: 'v14i4',
+		publishedOn: toIsoDateString(olderIssueDate),
+		doi: '10.35940/jyse.CHE.2026.140409',
+		citation:
+			'Choi, M. (2026). Bench-Scale CO2 Capture Column for School Laboratory Demonstrations. Journal of Young Scientists & Engineers, 14(4), 62-70. https://doi.org/10.35940/jyse.CHE.2026.140409',
+		figure: {
+			title: 'Outlet CO2 Concentration by Packing Height',
+			caption:
+				'Figure 24 reports normalized outlet concentration across flow and packing conditions.'
+		}
+	},
+	{
+		slug: 'bluetooth-mesh-evacuation-signage',
+		title: 'Bluetooth Mesh Evacuation Signage for Resilient Indoor Wayfinding',
+		authors: [
+			{
+				name: 'Noah Kim',
+				affiliation: 'Palo Alto High School',
+				role: 'Author'
+			},
+			{
+				name: 'Jordan Patel',
+				affiliation: 'Thomas Jefferson High School for Science and Technology',
+				role: 'Co-author'
+			}
+		],
+		abstract:
+			'This study evaluates a Bluetooth mesh network for synchronizing dynamic evacuation signage in school buildings. The system sustained robust update delivery during node failures and improved route guidance consistency.',
+		tags: ['IoT', 'Safety Engineering', 'Smart Infrastructure'],
+		issueId: 'v14i4',
+		publishedOn: toIsoDateString(olderIssueDate),
+		doi: '10.35940/jyse.IOT.2026.140410',
+		citation:
+			'Kim, N., & Patel, J. (2026). Bluetooth Mesh Evacuation Signage for Resilient Indoor Wayfinding. Journal of Young Scientists & Engineers, 14(4), 71-80. https://doi.org/10.35940/jyse.IOT.2026.140410',
+		figure: {
+			title: 'Packet Delivery Ratio Under Node Loss',
+			caption: 'Figure 25 compares signage update reliability as mesh topology degrades.'
+		}
+	},
+	{
+		slug: 'thermal-comfort-predictor-classrooms',
+		title: 'Thermal Comfort Prediction in Classrooms Using Low-Cost Multi-Sensor Data',
+		authors: [
+			{
+				name: 'Eliana Duarte',
+				affiliation: 'Stanford University, School of Engineering',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'The author models classroom thermal comfort from temperature, humidity, and airflow measurements captured by student-installed sensors. The resulting predictor aligned well with occupant surveys and supported practical ventilation adjustments.',
+		tags: ['Environmental Monitoring', 'Machine Learning', 'Building Systems'],
+		issueId: 'v14i4',
+		publishedOn: toIsoDateString(olderIssueDate),
+		doi: '10.35940/jyse.AIML.2026.140411',
+		citation:
+			'Duarte, E. (2026). Thermal Comfort Prediction in Classrooms Using Low-Cost Multi-Sensor Data. Journal of Young Scientists & Engineers, 14(4), 81-89. https://doi.org/10.35940/jyse.AIML.2026.140411',
+		figure: {
+			title: 'Comfort Prediction Error by Time Window',
+			caption: 'Figure 26 summarizes prediction error across school-day occupancy periods.'
+		}
+	},
+	{
+		slug: 'low-cost-wind-tunnel-airfoil-labs',
+		title: 'Low-Cost Wind Tunnel Protocols for Introductory Airfoil Laboratory Labs',
+		authors: [
+			{
+				name: 'Peter Halvorsen',
+				affiliation: 'Northeastern University, Mechanical and Industrial Engineering',
+				role: 'Author'
+			},
+			{
+				name: 'Nadia Torres',
+				affiliation: 'University of California, Davis',
+				role: 'Co-author'
+			}
+		],
+		abstract:
+			'This paper proposes reproducible wind-tunnel protocols for measuring lift and drag in classroom airfoil activities. The protocol improved run-to-run consistency and reduced setup time for student teams.',
+		tags: ['Aerospace Engineering', 'Experimental Methods', 'Education Technology'],
+		issueId: 'v14i4',
+		publishedOn: toIsoDateString(olderIssueDate),
+		doi: '10.35940/jyse.AER.2026.140412',
+		citation:
+			'Halvorsen, P., & Torres, N. (2026). Low-Cost Wind Tunnel Protocols for Introductory Airfoil Laboratory Labs. Journal of Young Scientists & Engineers, 14(4), 90-99. https://doi.org/10.35940/jyse.AER.2026.140412',
+		figure: {
+			title: 'Lift and Drag Repeatability',
+			caption: 'Figure 27 compares coefficient variance before and after protocol standardization.'
+		}
+	},
+	{
+		slug: 'peroxide-fuel-cell-catalyst-screen',
+		title: 'Rapid Catalyst Screening for Educational Hydrogen Peroxide Fuel Cells',
+		authors: [
+			{
+				name: 'Rohan Bedi',
+				affiliation: 'University of Washington, Materials Science and Engineering',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'The author evaluates low-cost catalyst candidates in a small hydrogen peroxide fuel-cell teaching platform. The screening approach identified stable high-activity options suitable for repeatable classroom experiments.',
+		tags: ['Materials Engineering', 'Electrochemistry', 'Energy'],
+		issueId: 'v14i4',
+		publishedOn: toIsoDateString(olderIssueDate),
+		doi: '10.35940/jyse.ENE.2026.140413',
+		citation:
+			'Bedi, R. (2026). Rapid Catalyst Screening for Educational Hydrogen Peroxide Fuel Cells. Journal of Young Scientists & Engineers, 14(4), 100-109. https://doi.org/10.35940/jyse.ENE.2026.140413',
+		figure: {
+			title: 'Power Density Across Catalyst Candidates',
+			caption:
+				'Figure 28 shows normalized cell output and degradation trends across tested catalysts.'
+		}
+	},
+	{
+		slug: 'cursive-archive-line-segmentation',
+		title: 'Line Segmentation Strategies for Noisy Cursive Archive Pages',
+		authors: [
+			{
+				name: 'Alexander Weimer',
+				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'This paper benchmarks projection-based and contour-based line segmentation methods on degraded cursive pages. A hybrid approach reduced merge and split errors for downstream handwriting recognition workflows.',
+		tags: ['Handwritten Text Recognition', 'Document Analysis', 'Machine Learning'],
+		issueId: 'v13i11',
+		publishedOn: '2025-12-09',
+		doi: '',
+		citation:
+			'Weimer, A. (2025). Line Segmentation Strategies for Noisy Cursive Archive Pages. Journal of Young Scientists & Engineers, 13(11). DOI pending assignment.',
+		figure: {
+			title: 'Segmentation Error by Method',
+			caption:
+				'Figure 29 compares over-segmentation and under-segmentation counts on validation pages.'
+		}
+	},
+	{
+		slug: 'ink-bleed-removal-classical-filters',
+		title: 'Classical Filtering for Ink-Bleed Removal in Historical Notes',
+		authors: [
+			{
+				name: 'Alexander Weimer',
+				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'The study evaluates non-neural denoising filters for suppressing bleed-through in scanned shorthand notes. Combined frequency and morphology filtering improved text legibility while preserving stroke continuity.',
+		tags: ['Document Analysis', 'Image Processing', 'Shorthand'],
+		issueId: 'v13i11',
+		publishedOn: '2025-12-09',
+		doi: '',
+		citation:
+			'Weimer, A. (2025). Classical Filtering for Ink-Bleed Removal in Historical Notes. Journal of Young Scientists & Engineers, 13(11). DOI pending assignment.',
+		figure: {
+			title: 'Legibility Scores by Filter Pipeline',
+			caption: 'Figure 30 reports reviewer legibility scores across denoising configurations.'
+		}
+	},
+	{
+		slug: 'shorthand-symbol-language-model-baseline',
+		title: 'Token-Level Language Model Baseline for Gregg Shorthand Symbols',
+		authors: [
+			{
+				name: 'Alexander Weimer',
+				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'This work presents a symbol-sequence language model baseline to support shorthand transcription correction. The model reduced character-sequence perplexity and improved post-recognition consistency on held-out notes.',
+		tags: ['Machine Learning', 'Language Modeling', 'Shorthand'],
+		issueId: 'v13i11',
+		publishedOn: '2025-12-09',
+		doi: '',
+		citation:
+			'Weimer, A. (2025). Token-Level Language Model Baseline for Gregg Shorthand Symbols. Journal of Young Scientists & Engineers, 13(11). DOI pending assignment.',
+		figure: {
+			title: 'Perplexity by Context Window',
+			caption: 'Figure 31 compares shorthand token perplexity across model context lengths.'
+		}
+	},
+	{
+		slug: 'archival-page-dewarping-mobile-photography',
+		title: 'Archival Page Dewarping from Mobile Phone Photography',
+		authors: [
+			{
+				name: 'Alexander Weimer',
+				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'The author studies geometric dewarping of photographed shorthand pages captured with handheld devices. The proposed correction pipeline improved line alignment and boosted downstream OCR stability.',
+		tags: ['Computer Vision', 'Document Analysis', 'Shorthand'],
+		issueId: 'v13i11',
+		publishedOn: '2025-12-09',
+		doi: '',
+		citation:
+			'Weimer, A. (2025). Archival Page Dewarping from Mobile Phone Photography. Journal of Young Scientists & Engineers, 13(11). DOI pending assignment.',
+		figure: {
+			title: 'Geometric Distortion Before/After Correction',
+			caption:
+				'Figure 32 shows representative page dewarping outcomes under perspective distortion.'
+		}
+	},
+	{
+		slug: 'few-shot-writer-adaptation-gru',
+		title: 'Few-Shot Writer Adaptation for GRU-Based Shorthand Recognition',
+		authors: [
+			{
+				name: 'Alexander Weimer',
+				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'This paper evaluates few-shot adaptation for handling writer-specific variation in Gregg shorthand recognition. Lightweight fine-tuning steps improved word accuracy for unseen writers with limited labeled samples.',
+		tags: ['Handwritten Text Recognition', 'Machine Learning', 'Shorthand'],
+		issueId: 'v13i11',
+		publishedOn: '2025-12-09',
+		doi: '',
+		citation:
+			'Weimer, A. (2025). Few-Shot Writer Adaptation for GRU-Based Shorthand Recognition. Journal of Young Scientists & Engineers, 13(11). DOI pending assignment.',
+		figure: {
+			title: 'Accuracy Gain vs. Adaptation Sample Count',
+			caption: 'Figure 33 plots writer-specific accuracy improvement by number of adaptation lines.'
+		}
+	},
+	{
+		slug: 'script-annotation-tool-interrater-study',
+		title: 'Inter-Rater Reliability Study for a Shorthand Annotation Tool',
+		authors: [
+			{
+				name: 'Alexander Weimer',
+				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'The study reports inter-rater agreement metrics for a custom shorthand transcription annotation interface. Results identify annotation rules that improve consistency and reduce ambiguous symbol labeling.',
+		tags: ['Annotation', 'Document Analysis', 'Research Methods'],
+		issueId: 'v13i11',
+		publishedOn: '2025-12-09',
+		doi: '',
+		citation:
+			'Weimer, A. (2025). Inter-Rater Reliability Study for a Shorthand Annotation Tool. Journal of Young Scientists & Engineers, 13(11). DOI pending assignment.',
+		figure: {
+			title: 'Agreement Metrics Across Annotation Rules',
+			caption: 'Figure 34 summarizes Cohen kappa scores by labeling guideline revision.'
+		}
+	},
+	{
+		slug: 'document-binarization-low-light-notes',
+		title: 'Robust Document Binarization for Low-Light Shorthand Notes',
+		authors: [
+			{
+				name: 'Alexander Weimer',
+				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'This paper compares adaptive thresholding strategies for low-light shorthand note images captured in archival conditions. A contrast-aware pipeline improved stroke retention while reducing background artifacts.',
+		tags: ['Image Processing', 'Document Analysis', 'Handwritten Text Recognition'],
+		issueId: 'v13i11',
+		publishedOn: '2025-12-09',
+		doi: '',
+		citation:
+			'Weimer, A. (2025). Robust Document Binarization for Low-Light Shorthand Notes. Journal of Young Scientists & Engineers, 13(11). DOI pending assignment.',
+		figure: {
+			title: 'Stroke Retention vs. Background Suppression',
+			caption:
+				'Figure 35 compares binarization quality metrics under uneven illumination conditions.'
+		}
+	},
+	{
+		slug: 'historical-ledger-table-structure-recovery',
+		title: 'Table Structure Recovery in Historical Ledger-Style Shorthand Pages',
+		authors: [
+			{
+				name: 'Alexander Weimer',
+				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'The author evaluates rule-based and learned approaches for recovering table structure from ledger-like shorthand documents. The combined method improved row-column reconstruction and downstream field extraction reliability.',
+		tags: ['Document Analysis', 'Machine Learning', 'Historical Records'],
+		issueId: 'v13i11',
+		publishedOn: '2025-12-09',
+		doi: '',
+		citation:
+			'Weimer, A. (2025). Table Structure Recovery in Historical Ledger-Style Shorthand Pages. Journal of Young Scientists & Engineers, 13(11). DOI pending assignment.',
+		figure: {
+			title: 'Cell Reconstruction Accuracy by Method',
+			caption: 'Figure 36 reports table cell reconstruction quality on annotated ledger samples.'
+		}
 	}
 ];
+
+export const articles: Article[] = [...articleSeedData].sort((a, b) => {
+	const dateDiff = new Date(b.publishedOn).getTime() - new Date(a.publishedOn).getTime();
+	if (dateDiff !== 0) return dateDiff;
+	return a.title.localeCompare(b.title);
+});
 
 export const editorialBoard: BoardMember[] = [
 	{
