@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import { tick } from 'svelte';
 
 	type NavHref = '/' | '/articles' | '/issues' | '/submit' | '/about' | '/editorial-board';
 
@@ -11,6 +12,15 @@
 		{ href: '/issues', label: 'Archives' },
 		{ href: '/editorial-board', label: 'Editorial Board' }
 	] satisfies { href: NavHref; label: string }[];
+
+	let showSearch = $state(false);
+	let searchInput = $state<HTMLInputElement | null>(null);
+
+	const openSearch = async () => {
+		showSearch = true;
+		await tick();
+		searchInput?.focus();
+	};
 </script>
 
 <header class="site-shell border-b border-[var(--border)]/80">
@@ -25,12 +35,13 @@
 				</p>
 			</a>
 			<div class="flex items-center gap-4">
-				<a
-					href={resolve('/search')}
+				<button
+					type="button"
+					onclick={openSearch}
 					class="focus-ring text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
 				>
 					Search
-				</a>
+				</button>
 				<a
 					href={resolve('/subscribe')}
 					class="focus-ring text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
@@ -45,6 +56,26 @@
 				</a>
 			</div>
 		</div>
+		{#if showSearch}
+			<form action={resolve('/search')} method="get" class="mt-4 flex max-w-xl items-center gap-2">
+				<label for="header-search" class="sr-only">Search articles</label>
+				<input
+					bind:this={searchInput}
+					id="header-search"
+					name="q"
+					type="search"
+					required
+					placeholder="Search articles..."
+					class="focus-ring w-full rounded-sm border border-[var(--border)] bg-[var(--surface)] px-3 py-2 text-sm text-[var(--text-default)]"
+				/>
+				<button
+					type="submit"
+					class="focus-ring rounded-sm bg-[var(--accent)] px-3 py-2 text-sm font-medium text-[var(--accent-contrast)]"
+				>
+					Go
+				</button>
+			</form>
+		{/if}
 		<nav aria-label="Primary" class="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
 			{#each navItems as item (item.href)}
 				<a

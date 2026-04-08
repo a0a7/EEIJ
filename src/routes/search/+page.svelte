@@ -1,8 +1,14 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
 	import { articles, journal } from '$lib/data/journal';
 
 	let query = $state('');
+
+	$effect(() => {
+		query = page.url.searchParams.get('q') ?? '';
+	});
+
 	const normalizedQuery = $derived(query.trim().toLowerCase());
 	const results = $derived.by(() => {
 		if (!normalizedQuery) return articles.slice(0, 12);
