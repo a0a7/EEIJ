@@ -6,14 +6,17 @@
 		<meta name="text-scale" content="scale" />
 		<script>
 			(() => {
-				try {
-					const saved = localStorage.getItem('jyse-theme');
-					const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-					const theme =
-						saved === 'light' || saved === 'dark' ? saved : systemDark ? 'dark' : 'light';
-					document.documentElement.dataset.theme = theme;
-				} catch {
-					document.documentElement.dataset.theme = 'dark';
+				const media = window.matchMedia('(prefers-color-scheme: dark)');
+				const applyTheme = () => {
+					document.documentElement.dataset.theme = media.matches ? 'dark' : 'light';
+				};
+
+				applyTheme();
+
+				if (typeof media.addEventListener === 'function') {
+					media.addEventListener('change', applyTheme);
+				} else if (typeof media.addListener === 'function') {
+					media.addListener(applyTheme);
 				}
 			})();
 		</script>

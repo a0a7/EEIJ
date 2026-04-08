@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 
 	type NavHref = '/' | '/articles' | '/issues' | '/submit' | '/about' | '/editorial-board';
 
@@ -24,11 +23,7 @@
 				<p class="text-lg font-semibold text-[var(--text-strong)] md:text-2xl">
 					Journal of Young Scientists & Engineers
 				</p>
-				<p class="text-sm text-[var(--text-muted)]">
-					For emerging researchers in science and engineering
-				</p>
 			</a>
-			<ThemeToggle />
 		</div>
 		<nav aria-label="Primary" class="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
 			{#each navItems as item (item.href)}
