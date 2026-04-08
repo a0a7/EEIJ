@@ -408,11 +408,11 @@ export const articles: Article[] = [
 
 export const editorialBoard: BoardMember[] = [
 	{
-		name: 'Dr. Matthew Lease',
+		name: 'Matthew Lease',
 		role: 'Editor-in-Chief',
 		affiliation: 'The University of Texas at Austin',
 		interests: ['Applied Physics', 'Instrumentation', 'Research Methods'],
-		bio: 'Oversees editorial quality and review consistency, with a focus on practical experimental design and responsible AI methods.'
+		bio: 'Oversees editorial quality and review consistency, with a focus on practical experimental design and responsible AI methods. He holds a PhD.'
 	},
 	{
 		name: 'Elena Petrova',
