@@ -65,6 +65,8 @@ const baseVolumeFor2026 = 14;
 const latestIssueVolume = baseVolumeFor2026 + (latestIssueDate.getUTCFullYear() - 2026);
 const previousIssueVolume = baseVolumeFor2026 + (previousIssueDate.getUTCFullYear() - 2026);
 const olderIssueVolume = baseVolumeFor2026 + (olderIssueDate.getUTCFullYear() - 2026);
+const journalStartVolume = 1;
+const latestArchiveVolume = latestIssueVolume;
 
 export type Issue = {
 	id: string;
@@ -106,7 +108,7 @@ export const importantDates = {
 	publicationDate: utcLongDateFormatter.format(latestIssueDate)
 };
 
-export const issues: Issue[] = [
+const latestAndFeaturedIssues: Issue[] = [
 	{
 		id: 'v14i6',
 		volume: latestIssueVolume,
@@ -135,6 +137,24 @@ export const issues: Issue[] = [
 		coverLabel: `Volume ${olderIssueVolume} • Issue ${olderIssueDate.getUTCMonth() + 1}`
 	},
 	{
+		id: 'v14i1',
+		volume: 14,
+		number: 1,
+		season: 'January 2026',
+		publicationDate: '2026-01-31',
+		theme: 'Foundational Student Projects in Energy, Robotics, and Data Systems',
+		coverLabel: 'Volume 14 • Issue 1'
+	},
+	{
+		id: 'v13i12',
+		volume: 13,
+		number: 12,
+		season: 'December 2025',
+		publicationDate: '2025-12-31',
+		theme: 'Applied Sensing and Data Collection for School-Led Research',
+		coverLabel: 'Volume 13 • Issue 12'
+	},
+	{
 		id: 'v13i11',
 		volume: 13,
 		number: 11,
@@ -144,6 +164,25 @@ export const issues: Issue[] = [
 		coverLabel: 'Volume 13 • Issue 11'
 	}
 ];
+
+const legacyVolumeArchiveIssues: Issue[] = Array.from(
+	{ length: Math.max(0, latestArchiveVolume - 2) },
+	(_, index) => {
+		const volume = latestArchiveVolume - 2 - index;
+		const publicationYear = Number(journal.firstYear) + (volume - journalStartVolume);
+		return {
+			id: `v${volume}i1`,
+			volume,
+			number: 1,
+			season: `January ${publicationYear}`,
+			publicationDate: `${publicationYear}-01-31`,
+			theme: `Selected archive papers from Volume ${volume}`,
+			coverLabel: `Volume ${volume} • Issue 1`
+		};
+	}
+);
+
+export const issues: Issue[] = [...latestAndFeaturedIssues, ...legacyVolumeArchiveIssues];
 
 const articleSeedData: Article[] = [
 	{
@@ -169,6 +208,111 @@ const articleSeedData: Article[] = [
 			title: 'Training and Validation Accuracy',
 			caption:
 				'Figure 2 shows the progression of training and validation accuracy during model optimization.'
+		}
+	},
+	{
+		slug: 'campus-energy-dashboard-baseline-v14i1',
+		title: 'Baseline Campus Energy Dashboard for Student-Led Power Monitoring',
+		authors: [
+			{
+				name: 'Eliana Duarte',
+				affiliation: 'Stanford University, School of Engineering',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'This paper presents a baseline design for a student-operated campus energy dashboard integrating smart-meter streams, occupancy schedules, and weather context. The dashboard supported weekly audit reviews and highlighted avoidable peak-load periods in common study spaces.',
+		tags: ['Energy', 'Data Systems', 'Smart Infrastructure'],
+		issueId: 'v14i1',
+		publishedOn: '2026-01-31',
+		doi: '10.35940/jyse.EEE.2026.140101',
+		citation:
+			'Duarte, E. (2026). Baseline Campus Energy Dashboard for Student-Led Power Monitoring. Journal of Young Scientists & Engineers, 14(1), 1-9. https://doi.org/10.35940/jyse.EEE.2026.140101',
+		figure: {
+			title: 'Daily Demand Curves by Building Zone',
+			caption:
+				'Figure 1 compares normalized weekday demand profiles across monitored classroom and lab zones.'
+		}
+	},
+	{
+		slug: 'introductory-robotics-slam-workflow-v14i1',
+		title: 'Introductory SLAM Workflow for Low-Cost Educational Robots',
+		authors: [
+			{
+				name: 'Ethan Clarke',
+				affiliation: 'Georgia Institute of Technology, First-Year Engineering',
+				role: 'Author'
+			},
+			{
+				name: 'Maya Venkataraman',
+				affiliation: 'Montgomery Blair High School',
+				role: 'Co-author'
+			}
+		],
+		abstract:
+			'The authors evaluate a lightweight simultaneous localization and mapping workflow adapted for low-cost educational robots. The pipeline produced stable maps in classroom corridors and reduced navigation drift during repeated autonomous runs.',
+		tags: ['Robotics', 'Sensors', 'Control Systems'],
+		issueId: 'v14i1',
+		publishedOn: '2026-01-31',
+		doi: '10.35940/jyse.ROB.2026.140102',
+		citation:
+			'Clarke, E., & Venkataraman, M. (2026). Introductory SLAM Workflow for Low-Cost Educational Robots. Journal of Young Scientists & Engineers, 14(1), 10-20. https://doi.org/10.35940/jyse.ROB.2026.140102',
+		figure: {
+			title: 'Localization Drift Across Mapping Sessions',
+			caption:
+				'Figure 2 summarizes pose drift over repeated autonomous traversals in two indoor test layouts.'
+		}
+	},
+	{
+		slug: 'school-weather-station-network-v13i12',
+		title: 'Distributed School Weather-Station Network for Local Microclimate Analysis',
+		authors: [
+			{
+				name: 'Leila Ahmed',
+				affiliation: 'Raleigh Charter High School',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'This work deploys a distributed weather-station network across school grounds to characterize microclimate variation. The collected data exposed persistent temperature and humidity gradients between shaded and exposed locations.',
+		tags: ['Environmental Monitoring', 'Sensors', 'Data Collection'],
+		issueId: 'v13i12',
+		publishedOn: '2025-12-31',
+		doi: '',
+		citation:
+			'Ahmed, L. (2025). Distributed School Weather-Station Network for Local Microclimate Analysis. Journal of Young Scientists & Engineers, 13(12). DOI pending assignment.',
+		figure: {
+			title: 'Microclimate Variation Across Campus Zones',
+			caption:
+				'Figure 3 presents temperature and humidity differences measured by station location over four weeks.'
+		}
+	},
+	{
+		slug: 'classroom-network-latency-audit-v13i12',
+		title: 'Latency Audit of Classroom IoT Networks Under Peak Device Load',
+		authors: [
+			{
+				name: 'Noah Kim',
+				affiliation: 'Palo Alto High School',
+				role: 'Author'
+			},
+			{
+				name: 'Jordan Patel',
+				affiliation: 'Thomas Jefferson High School for Science and Technology',
+				role: 'Co-author'
+			}
+		],
+		abstract:
+			'The paper audits classroom network latency behavior when many student IoT devices publish telemetry simultaneously. Results identify queueing thresholds and practical routing adjustments that reduce packet delay variation.',
+		tags: ['IoT', 'Networking', 'Performance Analysis'],
+		issueId: 'v13i12',
+		publishedOn: '2025-12-31',
+		doi: '',
+		citation:
+			'Kim, N., & Patel, J. (2025). Latency Audit of Classroom IoT Networks Under Peak Device Load. Journal of Young Scientists & Engineers, 13(12). DOI pending assignment.',
+		figure: {
+			title: 'Latency Percentiles by Device Count',
+			caption: 'Figure 4 compares median and tail latencies as active publisher counts increase.'
 		}
 	},
 	{
