@@ -154,7 +154,7 @@
 	</div>
 
 	<aside class="mt-8 hidden space-y-5 lg:mt-0 lg:block">
-		<section class="card sticky top-6 space-y-4 p-5">
+		<section class="card space-y-4 p-5">
 			<h2 class="text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase">Go to</h2>
 			<nav class="space-y-2 text-sm">
 				<a href="#abstract" class="block text-[var(--accent)] hover:underline">Abstract</a>
