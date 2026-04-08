@@ -2,6 +2,7 @@
 	import { resolve } from '$app/paths';
 	import searchIcon from '$lib/assets/images/search-icon.svg';
 	import { tick } from 'svelte';
+	import headerLogo from '$lib/assets/images/footerlogo.png';
 
 	type NavHref = '/' | '/articles' | '/issues' | '/submit' | '/about' | '/editorial-board';
 
@@ -33,7 +34,7 @@
 		<div class="flex flex-wrap items-start justify-between gap-3">
 			<a href={resolve('/')} class="space-y-1">
 				<p class="text-xs tracking-[0.16em] text-[var(--text-muted)]">
-					JYSE • ISSN 2319-6378 (Online)
+					<img src={headerLogo} alt="JYSE Logo" class="inline-block h-6 w-11" /> • ISSN 2319-6378 (Online)
 				</p>
 				<p class="text-lg font-semibold text-[var(--text-strong)] md:text-2xl">
 					Journal of Young Scientists & Engineers

@@ -200,7 +200,7 @@ const articleSeedData: Article[] = [
 			}
 		],
 		abstract:
-			'This study investigates a Gated Recurrent Unit-based deep learning approach for handwritten text recognition of Gregg shorthand. Using the Gregg-1916 dataset and limited training on a reduced subset, the model reached 40.04% word-level accuracy after 10 epochs. The work highlights both the feasibility and current limits of shorthand recognition, with implications for digitizing historical records. The trained model is released for public use.',
+			'Shorthand, also known as pen stenography, is a family of writing systems for English and other languages that emerged out of a need for a fast and efficient writing system in a predigital age. Of the many English shorthand systems, Gregg shorthand is the most prevalent (Zhai et al., 2018). While largely made obsolete by general-purpose computers, the cultural and legal value within old shorthand documents means that being able to efficiently scan shorthand documents into modern computer systems holds significant value. This investigation explored the implementation of a model built around a Gated Convolutional Neural network for purposes of handwritten text recognition of Gregg shorthand. An accuracy of 0.04 was achieved after minimal training. The finalized model is freely licensed and made available online for public access.',
 		tags: ['Handwritten Text Recognition', 'Machine Learning', 'Shorthand'],
 		issueId: 'v13i11',
 		publishedOn: '2025-12-09',
@@ -1098,7 +1098,7 @@ const articleSeedData: Article[] = [
 		title: 'Line Segmentation Strategies for Noisy Cursive Archive Pages',
 		authors: [
 			{
-				name: 'Alexander Weimer',
+				name: 'Alexandra Ballbach',
 				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
 				role: 'Author'
 			}
@@ -1122,7 +1122,7 @@ const articleSeedData: Article[] = [
 		title: 'Classical Filtering for Ink-Bleed Removal in Historical Notes',
 		authors: [
 			{
-				name: 'Alexander Weimer',
+				name: 'Jonas Kahnwald',
 				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
 				role: 'Author'
 			}
@@ -1145,7 +1145,7 @@ const articleSeedData: Article[] = [
 		title: 'Token-Level Language Model Baseline for Gregg Shorthand Symbols',
 		authors: [
 			{
-				name: 'Alexander Weimer',
+				name: 'Thomas Jackson',
 				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
 				role: 'Author'
 			}
@@ -1168,7 +1168,7 @@ const articleSeedData: Article[] = [
 		title: 'Archival Page Dewarping from Mobile Phone Photography',
 		authors: [
 			{
-				name: 'Alexander Weimer',
+				name: 'Li Fu',
 				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
 				role: 'Author'
 			}
@@ -1192,7 +1192,7 @@ const articleSeedData: Article[] = [
 		title: 'Few-Shot Writer Adaptation for GRU-Based Shorthand Recognition',
 		authors: [
 			{
-				name: 'Alexander Weimer',
+				name: 'Missy Muller',
 				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
 				role: 'Author'
 			}
@@ -1215,7 +1215,7 @@ const articleSeedData: Article[] = [
 		title: 'Inter-Rater Reliability Study for a Shorthand Annotation Tool',
 		authors: [
 			{
-				name: 'Alexander Weimer',
+				name: 'Aleana Johnson',
 				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
 				role: 'Author'
 			}
@@ -1238,7 +1238,7 @@ const articleSeedData: Article[] = [
 		title: 'Robust Document Binarization for Low-Light Shorthand Notes',
 		authors: [
 			{
-				name: 'Alexander Weimer',
+				name: 'Jaden Smith',
 				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
 				role: 'Author'
 			}
@@ -1262,7 +1262,7 @@ const articleSeedData: Article[] = [
 		title: 'Table Structure Recovery in Historical Ledger-Style Shorthand Pages',
 		authors: [
 			{
-				name: 'Alexander Weimer',
+				name: 'Zack Smith',
 				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
 				role: 'Author'
 			}

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import footerLogo from '$lib/assets/images/footer-logo-square.svg';
+	import footerLogo from '$lib/assets/images/footer-logo-square.png';
 </script>
 
 <footer class="site-shell mt-16 border-t border-[var(--border)]">
@@ -11,7 +11,7 @@
 			<img
 				src={footerLogo}
 				alt="Placeholder square logo"
-				class="h-20 w-20 border border-[var(--border)]"
+				class="h-20 w-20"
 			/>
 			<h2 class="text-lg font-semibold text-[var(--text-strong)]">
 				Journal of Young Scientists & Engineers

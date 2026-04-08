@@ -3,7 +3,7 @@
 	import SiteHeader from '$lib/components/SiteHeader.svelte';
 	import SiteFooter from '$lib/components/SiteFooter.svelte';
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/favicon.png';
 	import { journal } from '$lib/data/journal';
 	import { page } from '$app/state';
 
@@ -28,7 +28,7 @@
 	<SiteHeader />
 	<main class="container-shell py-10">
 		{#key page.url.pathname}
-			<div in:fade={{ duration: 180 }} out:fade={{ duration: 120 }}>
+			<div in:fade={{ duration: 60 }} out:fade={{ duration: 50 }}>
 				{@render children()}
 			</div>
 		{/key}

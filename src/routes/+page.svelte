@@ -43,8 +43,8 @@
 			<p class="flex items-center gap-2">
 				<img src={webIcon} alt="" aria-hidden="true" class="h-4 w-4" />
 				<span
-					><span class="font-medium text-[var(--text-strong)]">Website:</span>
-					{journal.domain}</span
+					><span class="font-medium text-[var(--text-strong)]">ISSN:</span>
+					ISSN 2319-6378 (Online)</span
 				>
 			</p>
 			<p>
