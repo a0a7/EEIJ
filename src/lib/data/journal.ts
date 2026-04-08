@@ -408,32 +408,32 @@ export const articles: Article[] = [
 
 export const editorialBoard: BoardMember[] = [
 	{
-		name: 'Prof. Fei-Fei Li',
+		name: 'Dr. Martin K. Hughes',
 		role: 'Editor-in-Chief',
-		affiliation: 'Stanford University',
-		interests: ['Computer Vision', 'Human-Centered AI', 'STEM Education'],
-		bio: 'Provides editorial leadership on technical quality and responsible AI, with expertise in computer vision and human-centered AI research.'
+		affiliation: 'Northbridge Institute of Technology',
+		interests: ['Applied Physics', 'Instrumentation', 'Research Methods'],
+		bio: 'Oversees editorial quality and review consistency, with a focus on practical experimental design and measurement reliability.'
 	},
 	{
-		name: 'Prof. Jennifer A. Doudna',
+		name: 'Elena Morales',
 		role: 'Managing Editor',
-		affiliation: 'University of California, Berkeley',
-		interests: ['Molecular Biology', 'Genome Engineering', 'Research Ethics'],
-		bio: 'Supports editorial policy and rigorous peer-review standards for molecular biology and genome engineering submissions.'
+		affiliation: 'Riverton College',
+		interests: ['Scientific Writing', 'Publication Ethics', 'Peer Review Workflows'],
+		bio: 'Coordinates editorial operations and supports clear, fair peer-review communication across subject sections.'
 	},
 	{
-		name: 'Prof. John A. Rogers',
+		name: 'Omar N. Rahman',
 		role: 'Associate Editor (Materials & Devices)',
-		affiliation: 'Northwestern University',
-		interests: ['Materials Science', 'Bioelectronics', 'Flexible Devices'],
-		bio: 'Handles submissions in advanced materials, bioelectronics, and flexible device engineering with an emphasis on experimental rigor.'
+		affiliation: 'Coastal Polytechnic University',
+		interests: ['Materials Science', 'Device Prototyping', 'Testing Standards'],
+		bio: 'Handles materials and device submissions, emphasizing reproducible prototyping and transparent evaluation criteria.'
 	},
 	{
-		name: 'Prof. Cynthia Breazeal',
+		name: 'Daniel Park',
 		role: 'Associate Editor (Robotics & Learning Systems)',
-		affiliation: 'Massachusetts Institute of Technology',
-		interests: ['Robotics', 'Human-Robot Interaction', 'Learning Technologies'],
-		bio: 'Leads editorial handling for robotics and human-robot interaction, including learning technologies and interactive intelligent systems.'
+		affiliation: 'Lakeview School of Engineering',
+		interests: ['Robotics', 'Embedded Systems', 'Engineering Education'],
+		bio: 'Leads review handling for robotics and learning systems, with emphasis on classroom-ready engineering applications.'
 	}
 ];
 
