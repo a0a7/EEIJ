@@ -1135,7 +1135,7 @@ const articleSeedData: Article[] = [
 	}
 ];
 
-export const articles: Article[] = [...articleSeedData].sort((a, b) => {
+export const articles: Article[] = articleSeedData.sort((a, b) => {
 	const dateDiff = new Date(b.publishedOn).getTime() - new Date(a.publishedOn).getTime();
 	if (dateDiff !== 0) return dateDiff;
 	return a.title.localeCompare(b.title);
