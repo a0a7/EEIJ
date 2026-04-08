@@ -16,7 +16,8 @@
 		})
 	);
 
-	const doiUrl = $derived(`https://doi.org/${data.article.doi}`);
+	const hasDoi = $derived(Boolean(data.article.doi?.trim()));
+	const doiUrl = $derived(hasDoi ? `https://doi.org/${data.article.doi}` : '');
 	const zenodoUrl = $derived(
 		`https://zenodo.org/search?page=1&size=20&q=${encodeURIComponent(data.article.doi)}`
 	);
@@ -27,7 +28,7 @@
 	const licenseUrl = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
 	const licenseBadgeUrl = licenseBadgeImage;
 	const citation = $derived(
-		`${data.article.authors.map((author: Author) => author.name).join(', ')} (${new Date(data.article.publishedOn).getFullYear()}). ${data.article.title}. ${journal.name}, ${data.issue.volume}(${data.issue.number}). https://doi.org/${data.article.doi}`
+		`${data.article.authors.map((author: Author) => author.name).join(', ')} (${new Date(data.article.publishedOn).getFullYear()}). ${data.article.title}. ${journal.name}, ${data.issue.volume}(${data.issue.number}). ${hasDoi ? `https://doi.org/${data.article.doi}` : 'DOI pending assignment.'}`
 	);
 	const recommendedArticles = $derived(
 		articles.filter((article) => article.slug !== data.article.slug).slice(0, 3)
@@ -95,14 +96,18 @@
 				<p class="mt-3 text-sm leading-7 text-[var(--text-default)]">{citation}</p>
 				<p class="mt-3 text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase">Identifiers</p>
 				<div class="mt-2 flex flex-wrap gap-3 text-sm">
-					<!-- eslint-disable svelte/no-navigation-without-resolve -->
-					<a
-						href={doiUrl}
-						target="_blank"
-						rel="noreferrer"
-						class="text-[var(--accent)] hover:underline">DOI</a
-					>
-					<!-- eslint-enable svelte/no-navigation-without-resolve -->
+					{#if hasDoi}
+						<!-- eslint-disable svelte/no-navigation-without-resolve -->
+						<a
+							href={doiUrl}
+							target="_blank"
+							rel="noreferrer"
+							class="text-[var(--accent)] hover:underline">DOI</a
+						>
+						<!-- eslint-enable svelte/no-navigation-without-resolve -->
+					{:else}
+						<span class="text-[var(--text-muted)]">DOI pending assignment</span>
+					{/if}
 					<!-- eslint-disable svelte/no-navigation-without-resolve -->
 					<a
 						href={zenodoUrl}
@@ -172,15 +177,19 @@
 					<span class="font-medium">Cite this:</span>
 					{citation}
 				</p>
-				<!-- eslint-disable svelte/no-navigation-without-resolve -->
-				<a
-					href={doiUrl}
-					target="_blank"
-					rel="noreferrer"
-					class="block break-all text-[var(--accent)] hover:underline"
-				>
-					{doiUrl}
-				</a>
+				{#if hasDoi}
+					<!-- eslint-disable svelte/no-navigation-without-resolve -->
+					<a
+						href={doiUrl}
+						target="_blank"
+						rel="noreferrer"
+						class="block break-all text-[var(--accent)] hover:underline"
+					>
+						{doiUrl}
+					</a>
+				{:else}
+					<p>DOI pending assignment</p>
+				{/if}
 				<p>Published {published}</p>
 				<p>Copyright © {new Date(data.article.publishedOn).getFullYear()} {journal.publisher}</p>
 				<a
