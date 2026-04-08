@@ -19,9 +19,9 @@
 	const zenodoUrl = $derived(
 		`https://zenodo.org/search?page=1&size=20&q=${encodeURIComponent(data.article.doi)}`
 	);
-	const pdfUrl = $derived(`https://www.jyse.org/downloads/jyse-${data.article.slug}.pdf`);
+	const pdfUrl = $derived(`${journal.domain}/downloads/jyse-${data.article.slug}.pdf`);
 	const supportingInfoUrl = $derived(
-		`https://huggingface.co/models?search=${encodeURIComponent(data.article.title)}`
+		`https://huggingface.co/models?search=${encodeURIComponent(`${data.article.doi} ${data.article.tags.join(' ')}`)}`
 	);
 	const licenseUrl = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
 	const licenseBadgeUrl = 'https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png';
