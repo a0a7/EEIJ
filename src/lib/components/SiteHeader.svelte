@@ -24,16 +24,16 @@
 					Journal of Young Scientists & Engineers
 				</p>
 			</a>
-			<div class="flex items-center gap-2">
+			<div class="flex items-center gap-4">
 				<button
 					type="button"
-					class="focus-ring rounded-sm border border-[var(--border)] px-3 py-1.5 text-xs font-medium text-[var(--text-default)] hover:border-[var(--accent)] hover:text-[var(--text-strong)]"
+					class="focus-ring text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
 				>
 					Search
 				</button>
 				<button
 					type="button"
-					class="focus-ring rounded-sm bg-[var(--accent)] px-3 py-1.5 text-xs font-medium text-[var(--accent-contrast)]"
+					class="focus-ring text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
 				>
 					Log in
 				</button>
