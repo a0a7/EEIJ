@@ -39,13 +39,45 @@
 				</p>
 			</a>
 			<div class="flex items-center gap-4">
-				<button
-					type="button"
-					onclick={openSearch}
-					class="focus-ring text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
-				>
-					Search
-				</button>
+				{#if showSearch}
+					<form action={resolve('/search')} method="get" class="flex items-center gap-1">
+						<label for="header-search" class="sr-only">Search articles</label>
+						<input
+							bind:this={searchInput}
+							id="header-search"
+							name="q"
+							type="search"
+							required
+							placeholder="Search..."
+							class="h-7 w-40 border-b border-[var(--border)] bg-transparent px-1 text-sm text-[var(--text-default)] outline-none focus:border-[var(--text-strong)]"
+							onkeydown={(event) => {
+								if (event.key === 'Escape') closeSearch();
+							}}
+						/>
+						<button
+							type="submit"
+							class="px-1 text-xs font-medium text-[var(--text-default)] hover:text-[var(--text-strong)]"
+						>
+							Go
+						</button>
+						<button
+							type="button"
+							onclick={closeSearch}
+							class="px-1 text-xs font-medium text-[var(--text-default)] hover:text-[var(--text-strong)]"
+							aria-label="Close search"
+						>
+							✕
+						</button>
+					</form>
+				{:else}
+					<button
+						type="button"
+						onclick={openSearch}
+						class="text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
+					>
+						Search
+					</button>
+				{/if}
 				<a
 					href={resolve('/subscribe')}
 					class="focus-ring text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
@@ -60,36 +92,6 @@
 				</a>
 			</div>
 		</div>
-		{#if showSearch}
-			<form action={resolve('/search')} method="get" class="mt-4 flex max-w-xl items-center gap-2">
-				<label for="header-search" class="sr-only">Search articles</label>
-				<input
-					bind:this={searchInput}
-					id="header-search"
-					name="q"
-					type="search"
-					required
-					placeholder="Search articles..."
-					class="focus-ring w-full rounded-sm border border-[var(--border)] bg-[var(--surface)] px-3 py-2 text-sm text-[var(--text-default)]"
-					onkeydown={(event) => {
-						if (event.key === 'Escape') closeSearch();
-					}}
-				/>
-				<button
-					type="submit"
-					class="focus-ring rounded-sm bg-[var(--accent)] px-3 py-2 text-sm font-medium text-[var(--accent-contrast)]"
-				>
-					Go
-				</button>
-				<button
-					type="button"
-					onclick={closeSearch}
-					class="focus-ring rounded-sm border border-[var(--border)] px-3 py-2 text-sm font-medium text-[var(--text-default)]"
-				>
-					Close
-				</button>
-			</form>
-		{/if}
 		<nav aria-label="Primary" class="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
 			{#each navItems as item (item.href)}
 				<a
