@@ -408,46 +408,32 @@ export const articles: Article[] = [
 
 export const editorialBoard: BoardMember[] = [
 	{
-		name: 'Dr. Helena Price',
+		name: 'Prof. Fei-Fei Li',
 		role: 'Editor-in-Chief',
-		affiliation: 'Massachusetts Institute of Technology',
-		interests: ['Engineering Education', 'Research Integrity', 'Applied AI'],
-		bio: 'Oversees editorial direction, publication quality, and strategic planning for JYSE.'
+		affiliation: 'Stanford University',
+		interests: ['Computer Vision', 'Human-Centered AI', 'STEM Education'],
+		bio: 'Provides editorial leadership on scientific quality, responsible AI, and long-term journal direction.'
 	},
 	{
-		name: 'Prof. Samuel Okafor',
+		name: 'Prof. Jennifer A. Doudna',
 		role: 'Managing Editor',
-		affiliation: 'University of Michigan',
-		interests: ['Cyber-Physical Systems', 'Embedded Controls'],
-		bio: 'Coordinates manuscript handling, reviewer assignment, and editorial timelines.'
+		affiliation: 'University of California, Berkeley',
+		interests: ['Molecular Biology', 'Genome Engineering', 'Research Ethics'],
+		bio: 'Supports editorial policy, peer-review standards, and transparent research reporting.'
 	},
 	{
-		name: 'Dr. Clara Jin',
-		role: 'Associate Editor (Methods & Reproducibility)',
-		affiliation: 'University of Toronto',
-		interests: ['Open Science', 'Data Standards', 'Computational Reproducibility'],
-		bio: 'Leads reproducibility checks and standards for methods, data, and reporting.'
+		name: 'Prof. John A. Rogers',
+		role: 'Associate Editor (Materials & Devices)',
+		affiliation: 'Northwestern University',
+		interests: ['Materials Science', 'Bioelectronics', 'Flexible Devices'],
+		bio: 'Handles submissions in advanced materials, electronic devices, and translational engineering.'
 	},
 	{
-		name: 'Prof. Mateo Alvarez',
-		role: 'Associate Editor (Robotics & Intelligent Systems)',
-		affiliation: 'University of California, San Diego',
-		interests: ['Autonomous Robotics', 'Optimization', 'Safety Assurance'],
-		bio: 'Handles submissions in robotics, controls, autonomous systems, and deployment safety.'
-	},
-	{
-		name: 'Dr. Aisha Rahman',
-		role: 'Associate Editor (Bioengineering)',
-		affiliation: 'Johns Hopkins University',
-		interests: ['Microfluidics', 'Biomechanics', 'Translational Prototyping'],
-		bio: 'Manages biomedical engineering manuscripts and translational science submissions.'
-	},
-	{
-		name: 'Prof. Daniel Mercer',
-		role: 'Section Editor (Student Research)',
-		affiliation: 'University of Texas at Austin',
-		interests: ['STEM Mentorship', 'Research Communication', 'Inclusive Pedagogy'],
-		bio: 'Supports student-focused submissions and editorial development resources for new authors.'
+		name: 'Prof. Cynthia Breazeal',
+		role: 'Associate Editor (Robotics & Learning Systems)',
+		affiliation: 'Massachusetts Institute of Technology',
+		interests: ['Robotics', 'Human-Robot Interaction', 'Learning Technologies'],
+		bio: 'Leads editorial handling for robotics, interactive systems, and technology-enhanced learning research.'
 	}
 ];
 
