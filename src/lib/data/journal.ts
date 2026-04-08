@@ -67,6 +67,7 @@ const previousIssueVolume = baseVolumeFor2026 + (previousIssueDate.getUTCFullYea
 const olderIssueVolume = baseVolumeFor2026 + (olderIssueDate.getUTCFullYear() - 2026);
 const journalStartVolume = 1;
 const latestArchiveVolume = latestIssueVolume;
+const recentVolumesExcludedFromLegacyArchive = 2;
 
 export type Issue = {
 	id: string;
@@ -166,9 +167,11 @@ const latestAndFeaturedIssues: Issue[] = [
 ];
 
 const legacyVolumeArchiveIssues: Issue[] = Array.from(
-	{ length: Math.max(0, latestArchiveVolume - 2) },
+	{
+		length: Math.max(0, latestArchiveVolume - recentVolumesExcludedFromLegacyArchive)
+	},
 	(_, index) => {
-		const volume = latestArchiveVolume - 2 - index;
+		const volume = latestArchiveVolume - recentVolumesExcludedFromLegacyArchive - index;
 		const publicationYear = Number(journal.firstYear) + (volume - journalStartVolume);
 		return {
 			id: `v${volume}i1`,
