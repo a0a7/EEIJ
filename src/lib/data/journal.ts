@@ -133,10 +133,44 @@ export const issues: Issue[] = [
 		publicationDate: toIsoDateString(olderIssueDate),
 		theme: 'Accessible Methods in Robotics, Environment, and Materials',
 		coverLabel: `Volume ${olderIssueVolume} • Issue ${olderIssueDate.getUTCMonth() + 1}`
+	},
+	{
+		id: 'v13i11',
+		volume: 13,
+		number: 11,
+		season: 'December 2025',
+		publicationDate: '2025-12-09',
+		theme: 'Historical Script Digitization and Handwritten Text Recognition',
+		coverLabel: 'Volume 13 • Issue 11'
 	}
 ];
 
 export const articles: Article[] = [
+	{
+		slug: 'error-corrected-deep-learning-gregg-shorthand',
+		title:
+			'Error-corrected deep learning approach to handwritten text recognition of Gregg shorthand',
+		authors: [
+			{
+				name: 'Alexander Weimer',
+				affiliation: 'Minnetonka Research, 18301 MN-7, Minnetonka, MN 55345',
+				role: 'Author'
+			}
+		],
+		abstract:
+			'This study investigates a Gated Recurrent Unit-based deep learning approach for handwritten text recognition of Gregg shorthand. Using the Gregg-1916 dataset and limited training on a reduced subset, the model reached 40.04% word-level accuracy after 10 epochs. The work highlights both the feasibility and current limits of shorthand recognition, with implications for digitizing historical records. The trained model is released for public use.',
+		tags: ['Handwritten Text Recognition', 'Machine Learning', 'Shorthand'],
+		issueId: 'v13i11',
+		publishedOn: '2025-12-09',
+		doi: '10.xxxx/jyse.xxxx',
+		citation:
+			'Weimer, A. (2025). Error-corrected deep learning approach to handwritten text recognition of Gregg shorthand. Journal of Young Scientists & Engineers, 13(11). https://doi.org/10.xxxx/jyse.xxxx',
+		figure: {
+			title: 'Training and Validation Accuracy',
+			caption:
+				'Figure 2 shows the progression of training and validation accuracy during model optimization.'
+		}
+	},
 	{
 		slug: 'classroom-air-quality-sensor-network',
 		title: 'A Low-Cost Distributed Air-Quality Sensor Network Built with ESP32 Boards',
