@@ -16,18 +16,19 @@
 	<meta name="description" content={journal.description} />
 	<meta
 		name="keywords"
-		content="student research, engineering journal, STEM publication, mentored research"
+		content="open access journal, science journal, engineering journal, peer-reviewed, student research"
 	/>
 	<meta property="og:title" content={journal.name} />
 	<meta property="og:description" content={journal.description} />
 	<meta property="og:type" content="website" />
+	<meta property="og:url" content={journal.domain} />
 </svelte:head>
 
-<div class="min-h-screen bg-[var(--bg)] text-[var(--text-default)]">
+<div class="min-h-screen bg-[var(--main-bg)] text-[var(--text-default)]">
 	<SiteHeader />
-	<main class="mx-auto w-full max-w-6xl px-6 py-12">
+	<main class="container-shell py-10">
 		{#key page.url.pathname}
-			<div in:fade={{ duration: 220 }} out:fade={{ duration: 160 }}>
+			<div in:fade={{ duration: 180 }} out:fade={{ duration: 120 }}>
 				{@render children()}
 			</div>
 		{/key}

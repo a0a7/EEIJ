@@ -10,13 +10,13 @@
 	const authorNames = $derived(article.authors.map((author: Author) => author.name).join(', '));
 </script>
 
-<article class="card article-card group flex h-full flex-col gap-4 p-6">
+<article class="card article-card group flex h-full flex-col gap-4 p-5">
 	<div class="space-y-2">
-		<p class="text-xs tracking-[0.2em] text-[var(--text-muted)] uppercase">
-			{issue ? `Volume ${issue.volume}, Issue ${issue.number}` : 'EEIJ Article'}
+		<p class="text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase">
+			{issue ? `Volume ${issue.volume}, Issue ${issue.number}` : 'JYSE Article'}
 		</p>
 		<h3
-			class="font-serif text-xl text-[var(--text-strong)] transition-colors duration-200 group-hover:text-[var(--accent)]"
+			class="text-xl font-semibold text-[var(--text-strong)] transition-colors duration-150 group-hover:text-[var(--accent)]"
 		>
 			<a href={resolve(`/articles/${article.slug}`)} class="focus-ring">{article.title}</a>
 		</h3>

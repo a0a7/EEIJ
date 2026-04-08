@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Book icon placeholder">
+  <rect width="24" height="24" fill="#dfe7f2" />
+  <rect x="5" y="4" width="14" height="16" fill="none" stroke="#334155" stroke-width="2" />
+  <line x1="10" y1="4" x2="10" y2="20" stroke="#334155" stroke-width="2" />
+</svg>
