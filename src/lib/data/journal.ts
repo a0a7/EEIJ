@@ -412,28 +412,28 @@ export const editorialBoard: BoardMember[] = [
 		role: 'Editor-in-Chief',
 		affiliation: 'Stanford University',
 		interests: ['Computer Vision', 'Human-Centered AI', 'STEM Education'],
-		bio: 'Provides editorial leadership on scientific quality, responsible AI, and long-term journal direction.'
+		bio: 'Provides editorial leadership on technical quality and responsible AI, with expertise in computer vision and human-centered AI research.'
 	},
 	{
 		name: 'Prof. Jennifer A. Doudna',
 		role: 'Managing Editor',
 		affiliation: 'University of California, Berkeley',
 		interests: ['Molecular Biology', 'Genome Engineering', 'Research Ethics'],
-		bio: 'Supports editorial policy, peer-review standards, and transparent research reporting.'
+		bio: 'Supports editorial policy and rigorous peer-review standards for molecular biology and genome engineering submissions.'
 	},
 	{
 		name: 'Prof. John A. Rogers',
 		role: 'Associate Editor (Materials & Devices)',
 		affiliation: 'Northwestern University',
 		interests: ['Materials Science', 'Bioelectronics', 'Flexible Devices'],
-		bio: 'Handles submissions in advanced materials, electronic devices, and translational engineering.'
+		bio: 'Handles submissions in advanced materials, bioelectronics, and flexible device engineering with an emphasis on experimental rigor.'
 	},
 	{
 		name: 'Prof. Cynthia Breazeal',
 		role: 'Associate Editor (Robotics & Learning Systems)',
 		affiliation: 'Massachusetts Institute of Technology',
 		interests: ['Robotics', 'Human-Robot Interaction', 'Learning Technologies'],
-		bio: 'Leads editorial handling for robotics, interactive systems, and technology-enhanced learning research.'
+		bio: 'Leads editorial handling for robotics and human-robot interaction, including learning technologies and interactive intelligent systems.'
 	}
 ];
 
