@@ -66,14 +66,19 @@
 		</div>
 		<div class="flex flex-wrap gap-3">
 			<a
-				href={resolve('/submit')}
+				href={resolve('/articles')}
 				class="focus-ring rounded-sm bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-[var(--accent-contrast)]"
-				>Article Submission System</a
+				>Read</a
 			>
 			<a
 				href={resolve('/about')}
 				class="focus-ring rounded-sm border border-[var(--border)] px-5 py-2.5 text-sm text-[var(--text-default)]"
 				>Aim and Scope</a
+			>
+			<a
+				href={resolve('/submit')}
+				class="focus-ring rounded-sm border border-[var(--border)] px-5 py-2.5 text-sm text-[var(--text-default)]"
+				>For Authors</a
 			>
 		</div>
 	</div>
@@ -121,8 +126,8 @@
 	</div>
 </section>
 
-<section class="mt-14 grid gap-6 lg:grid-cols-[1.2fr_1fr]">
-	<div class="card p-5">
+<section class="mt-14 grid gap-6 lg:grid-cols-[1.2fr_1fr] lg:items-start">
+	<div class="card self-start p-5">
 		<p class="text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase">
 			Article Submission System
 		</p>

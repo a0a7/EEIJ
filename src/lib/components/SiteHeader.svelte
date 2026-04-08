@@ -25,18 +25,24 @@
 				</p>
 			</a>
 			<div class="flex items-center gap-4">
-				<button
-					type="button"
+				<a
+					href={resolve('/articles')}
 					class="focus-ring text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
 				>
 					Search
-				</button>
-				<button
-					type="button"
+				</a>
+				<a
+					href={resolve('/issues')}
+					class="focus-ring text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
+				>
+					Subscribe
+				</a>
+				<a
+					href={resolve('/submit')}
 					class="focus-ring text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
 				>
 					Log in
-				</button>
+				</a>
 			</div>
 		</div>
 		<nav aria-label="Primary" class="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">

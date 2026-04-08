@@ -24,7 +24,7 @@
 	<meta property="og:url" content={journal.domain} />
 </svelte:head>
 
-<div class="min-h-screen bg-[var(--bg)] text-[var(--text-default)]">
+<div class="min-h-screen bg-[var(--main-bg)] text-[var(--text-default)]">
 	<SiteHeader />
 	<main class="container-shell py-10">
 		{#key page.url.pathname}

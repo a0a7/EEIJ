@@ -26,6 +26,7 @@ body {
 
 html[data-theme='dark'] {
 	--bg: #0a1018;
+	--main-bg: #0a1018;
 	--surface: #121b27;
 	--surface-elevated: #1a2a3d;
 	--text-strong: #ecf2ff;
@@ -41,6 +42,7 @@ html[data-theme='dark'] {
 html:not([data-theme]),
 html[data-theme='light'] {
 	--bg: #e8eef6;
+	--main-bg: #f5f8fc;
 	--surface: #f5f8fc;
 	--surface-elevated: #dde6f2;
 	--text-strong: #0f1d31;
