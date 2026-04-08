@@ -58,6 +58,7 @@
 						<img src={searchIcon} alt="" aria-hidden="true" class="h-3.5 w-3.5 opacity-75" />
 						<button
 							type="submit"
+							aria-label="Submit search"
 							class="cursor-pointer px-1 text-xs font-medium text-[var(--text-default)] hover:text-[var(--text-strong)]"
 						>
 							Go
