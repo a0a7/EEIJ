@@ -18,6 +18,12 @@
 	const zenodoUrl = $derived(
 		`https://zenodo.org/search?page=1&size=20&q=${encodeURIComponent(data.article.doi)}`
 	);
+	const pdfUrl = $derived(`https://www.jyse.org/downloads/jyse-${data.article.slug}.pdf`);
+	const supportingInfoUrl = $derived(
+		`https://huggingface.co/models?search=${encodeURIComponent(data.article.title)}`
+	);
+	const licenseUrl = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
+	const licenseBadgeUrl = 'https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png';
 	const citation = $derived(
 		`${data.article.authors.map((author: Author) => author.name).join(', ')} (${new Date(data.article.publishedOn).getFullYear()}). ${data.article.title}. ${journal.name}, ${data.issue.volume}(${data.issue.number}). https://doi.org/${data.article.doi}`
 	);
@@ -37,10 +43,11 @@
 			Volume {data.issue.volume}, Issue {data.issue.number} • {published}
 		</p>
 		<p
-			class="inline-flex items-center gap-2 text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase"
+			class="inline-flex flex-wrap items-center gap-2 text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase"
 		>
 			<span aria-hidden="true">🔓</span>
 			<span>Open access • Peer reviewed • CC BY 4.0</span>
+			<img src={licenseBadgeUrl} alt="CC BY-NC-SA 4.0" width="80" height="15" loading="lazy" />
 		</p>
 		<h1 class="text-4xl leading-tight font-semibold text-[var(--text-strong)] md:text-5xl">
 			{data.article.title}
@@ -48,7 +55,7 @@
 		<p class="text-sm leading-7 text-[var(--text-default)]">
 			{#each data.article.authors as author, i (author.name)}
 				<span class="font-medium text-[var(--text-strong)]">{author.name}</span>
-				<span> ({author.role}) — {author.affiliation}</span>
+				<span> ({author.role})</span>
 				<!-- eslint-disable svelte/no-navigation-without-resolve -->
 				<a
 					href={getOrcidSearchUrl(author.name)}
@@ -107,21 +114,30 @@
 				discovery.
 			</p>
 			<div class="mt-4 flex flex-wrap gap-3">
-				<a
-					href={`https://www.jyse.org/downloads/jyse-${data.article.slug}.pdf`}
-					class="focus-ring inline-flex rounded-sm bg-[var(--accent)] px-5 py-2 text-sm text-[var(--accent-contrast)]"
-					download
-				>
-					Download PDF
-				</a>
 				<!-- eslint-disable svelte/no-navigation-without-resolve -->
 				<a
-					href={doiUrl}
+					href={licenseUrl}
+					target="_blank"
+					rel="noreferrer"
+					class="focus-ring inline-flex rounded-sm bg-[var(--accent)] px-5 py-2 text-sm text-[var(--accent-contrast)]"
+				>
+					Open Access
+				</a>
+				<a
+					href={pdfUrl}
 					target="_blank"
 					rel="noreferrer"
 					class="focus-ring inline-flex rounded-sm border border-[var(--border)] px-5 py-2 text-sm text-[var(--text-default)] hover:border-[var(--accent)]"
 				>
-					View DOI record
+					View PDF
+				</a>
+				<a
+					href={supportingInfoUrl}
+					target="_blank"
+					rel="noreferrer"
+					class="focus-ring inline-flex rounded-sm border border-[var(--border)] px-5 py-2 text-sm text-[var(--text-default)] hover:border-[var(--accent)]"
+				>
+					Supporting information
 				</a>
 				<!-- eslint-enable svelte/no-navigation-without-resolve -->
 			</div>
