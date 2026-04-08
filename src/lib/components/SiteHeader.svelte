@@ -61,14 +61,7 @@
 			</div>
 		</div>
 		{#if showSearch}
-			<form
-				action={resolve('/search')}
-				method="get"
-				class="mt-4 flex max-w-xl items-center gap-2"
-				onkeydown={(event) => {
-					if (event.key === 'Escape') closeSearch();
-				}}
-			>
+			<form action={resolve('/search')} method="get" class="mt-4 flex max-w-xl items-center gap-2">
 				<label for="header-search" class="sr-only">Search articles</label>
 				<input
 					bind:this={searchInput}
@@ -78,6 +71,9 @@
 					required
 					placeholder="Search articles..."
 					class="focus-ring w-full rounded-sm border border-[var(--border)] bg-[var(--surface)] px-3 py-2 text-sm text-[var(--text-default)]"
+					onkeydown={(event) => {
+						if (event.key === 'Escape') closeSearch();
+					}}
 				/>
 				<button
 					type="submit"
