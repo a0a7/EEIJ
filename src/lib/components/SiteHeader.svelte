@@ -26,19 +26,19 @@
 			</a>
 			<div class="flex items-center gap-4">
 				<a
-					href={resolve('/articles')}
+					href={resolve('/search')}
 					class="focus-ring text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
 				>
 					Search
 				</a>
 				<a
-					href={resolve('/issues')}
+					href={resolve('/subscribe')}
 					class="focus-ring text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
 				>
 					Subscribe
 				</a>
 				<a
-					href={resolve('/submit')}
+					href={resolve('/login')}
 					class="focus-ring text-sm font-medium text-[var(--text-default)] transition-colors duration-150 hover:text-[var(--text-strong)]"
 				>
 					Log in
