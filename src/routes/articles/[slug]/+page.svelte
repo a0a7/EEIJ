@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import licenseBadgeImage from '$lib/assets/images/cc-license-badge.svg';
 	import TagPill from '$lib/components/TagPill.svelte';
 	import { articles, journal } from '$lib/data/journal';
 	import type { Author } from '$lib/data/journal';
@@ -26,7 +25,6 @@
 		`https://huggingface.co/models?search=${encodeURIComponent(`${data.article.doi} ${data.article.tags.join(' ')}`)}`
 	);
 	const licenseUrl = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
-	const licenseBadgeUrl = licenseBadgeImage;
 	const citation = $derived(
 		`${data.article.authors.map((author: Author) => author.name).join(', ')} (${new Date(data.article.publishedOn).getFullYear()}). ${data.article.title}. ${journal.name}, ${data.issue.volume}(${data.issue.number}). ${hasDoi ? `https://doi.org/${data.article.doi}` : 'DOI pending assignment.'}`
 	);
@@ -54,7 +52,6 @@
 			>
 				<span aria-hidden="true">🔓</span>
 				<span>Open access • Peer reviewed • CC BY-NC-SA 4.0</span>
-				<img src={licenseBadgeUrl} alt="CC BY-NC-SA 4.0" width="80" height="15" loading="lazy" />
 			</p>
 			<h1 class="text-4xl leading-tight font-semibold text-[var(--text-strong)] md:text-5xl">
 				{data.article.title}
