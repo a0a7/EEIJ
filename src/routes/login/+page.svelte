@@ -49,7 +49,12 @@
 					<input type="checkbox" name="remember" class="h-4 w-4 rounded border-[var(--border)]" />
 					Remember me
 				</label>
-				<a href="#" class="text-sm text-[var(--accent)] hover:underline">Forgot password?</a>
+				<a
+					href="mailto:editorial@jyse.org?subject=Password%20assistance"
+					class="text-sm text-[var(--accent)] hover:underline"
+				>
+					Forgot password?
+				</a>
 			</div>
 
 			<button

@@ -21,6 +21,10 @@
 		await tick();
 		searchInput?.focus();
 	};
+
+	const closeSearch = () => {
+		showSearch = false;
+	};
 </script>
 
 <header class="site-shell border-b border-[var(--border)]/80">
@@ -57,7 +61,14 @@
 			</div>
 		</div>
 		{#if showSearch}
-			<form action={resolve('/search')} method="get" class="mt-4 flex max-w-xl items-center gap-2">
+			<form
+				action={resolve('/search')}
+				method="get"
+				class="mt-4 flex max-w-xl items-center gap-2"
+				onkeydown={(event) => {
+					if (event.key === 'Escape') closeSearch();
+				}}
+			>
 				<label for="header-search" class="sr-only">Search articles</label>
 				<input
 					bind:this={searchInput}
@@ -73,6 +84,13 @@
 					class="focus-ring rounded-sm bg-[var(--accent)] px-3 py-2 text-sm font-medium text-[var(--accent-contrast)]"
 				>
 					Go
+				</button>
+				<button
+					type="button"
+					onclick={closeSearch}
+					class="focus-ring rounded-sm border border-[var(--border)] px-3 py-2 text-sm font-medium text-[var(--text-default)]"
+				>
+					Close
 				</button>
 			</form>
 		{/if}

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { journal } from '$lib/data/journal';
 </script>
 
@@ -24,7 +25,7 @@
 			<p class="text-2xl font-semibold text-[var(--text-strong)]">$29 / year</p>
 			<p class="text-sm text-[var(--text-default)]">Online archive access and issue alerts.</p>
 			<a
-				href="/redirect-stripe?q=30ajvbn330c"
+				href={resolve('/redirect-stripe?q=30ajvbn330c')}
 				class="focus-ring mt-auto inline-flex justify-center rounded-sm bg-[var(--accent)] px-4 py-2 text-sm font-medium text-[var(--accent-contrast)]"
 			>
 				Choose student
@@ -35,7 +36,7 @@
 			<p class="text-2xl font-semibold text-[var(--text-strong)]">$79 / year</p>
 			<p class="text-sm text-[var(--text-default)]">Digital access plus quarterly highlights.</p>
 			<a
-				href="/redirect-stripe?q=30ajvbn330c"
+				href={resolve('/redirect-stripe?q=30ajvbn330c')}
 				class="focus-ring mt-auto inline-flex justify-center rounded-sm bg-[var(--accent)] px-4 py-2 text-sm font-medium text-[var(--accent-contrast)]"
 			>
 				Choose individual
@@ -46,7 +47,7 @@
 			<p class="text-2xl font-semibold text-[var(--text-strong)]">$299 / year</p>
 			<p class="text-sm text-[var(--text-default)]">Campus-wide online access and support.</p>
 			<a
-				href="/redirect-stripe?q=30ajvbn330c"
+				href={resolve('/redirect-stripe?q=30ajvbn330c')}
 				class="focus-ring mt-auto inline-flex justify-center rounded-sm bg-[var(--accent)] px-4 py-2 text-sm font-medium text-[var(--accent-contrast)]"
 			>
 				Choose institutional
@@ -55,11 +56,9 @@
 		<article class="card flex flex-col gap-3 p-5">
 			<h2 class="text-base font-semibold text-[var(--text-strong)]">Print + Online</h2>
 			<p class="text-2xl font-semibold text-[var(--text-strong)]">$199 / year</p>
-			<p class="text-sm text-[var(--text-default)]">
-				All digital benefits plus print delivery.
-			</p>
+			<p class="text-sm text-[var(--text-default)]">All digital benefits plus print delivery.</p>
 			<a
-				href="/redirect-stripe?q=30ajvbn330c"
+				href={resolve('/redirect-stripe?q=30ajvbn330c')}
 				class="focus-ring mt-auto inline-flex justify-center rounded-sm bg-[var(--accent)] px-4 py-2 text-sm font-medium text-[var(--accent-contrast)]"
 			>
 				Choose print + online
