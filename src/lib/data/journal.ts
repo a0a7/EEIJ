@@ -412,28 +412,28 @@ export const editorialBoard: BoardMember[] = [
 		role: 'Editor-in-Chief',
 		affiliation: 'The University of Texas at Austin',
 		interests: ['Applied Physics', 'Instrumentation', 'Research Methods'],
-		bio: 'Oversees editorial quality and review consistency, with a focus on practical experimental design and responsible AI methods. Highest degree: PhD.'
+		bio: 'Oversees editorial quality and review consistency, with a focus on practical experimental design and responsible AI methods.'
 	},
 	{
 		name: 'Elena Petrova',
 		role: 'Managing Editor',
 		affiliation: 'University of Glasgow',
 		interests: ['Scientific Writing', 'Publication Ethics', 'Peer Review Workflows'],
-		bio: 'Coordinates editorial operations and supports clear, fair peer-review communication across subject sections. Highest degree: MSc.'
+		bio: 'Coordinates editorial operations and supports clear, fair peer-review communication across subject sections.'
 	},
 	{
 		name: 'Omar Al-Hassan',
 		role: 'Associate Editor (Materials & Devices)',
 		affiliation: 'University of Portsmouth',
 		interests: ['Materials Science', 'Device Prototyping', 'Testing Standards'],
-		bio: 'Handles materials and device submissions, emphasizing reproducible prototyping and transparent evaluation criteria. Highest degree: MEng.'
+		bio: 'Handles materials and device submissions, emphasizing reproducible prototyping and transparent evaluation criteria.'
 	},
 	{
 		name: 'James R. Walker',
 		role: 'Associate Editor (Robotics & Learning Systems)',
 		affiliation: 'University of Leeds',
 		interests: ['Robotics', 'Embedded Systems', 'Engineering Education'],
-		bio: 'Leads review handling for robotics and learning systems, with emphasis on classroom-ready engineering applications. Highest degree: MSc.'
+		bio: 'Leads review handling for robotics and learning systems, with emphasis on classroom-ready engineering applications.'
 	}
 ];
 
