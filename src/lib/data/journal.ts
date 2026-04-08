@@ -139,7 +139,7 @@ export const issues: Issue[] = [
 export const articles: Article[] = [
 	{
 		slug: 'classroom-air-quality-sensor-network',
-		title: 'A Low-Cost Classroom Air-Quality Sensor Network Built with ESP32 Boards',
+		title: 'A Low-Cost Distributed Air-Quality Sensor Network Built with ESP32 Boards',
 		authors: [
 			{
 				name: 'Maya Venkataraman',
@@ -163,7 +163,7 @@ export const articles: Article[] = [
 	},
 	{
 		slug: 'solar-phone-charging-bench-study',
-		title: 'Benchmarking Portable Solar Phone Charging Kits for Campus Use',
+		title: 'Benchmarking Portable Solar Phone Charging Kits for Outdoor Field Use',
 		authors: [
 			{
 				name: 'Noah Kim',
@@ -192,7 +192,8 @@ export const articles: Article[] = [
 	},
 	{
 		slug: 'rainwater-filter-column-study',
-		title: 'Evaluating Layered Sand-Charcoal Filters for School Rainwater Harvesting Systems',
+		title:
+			'Evaluating Layered Sand-Charcoal Filters for Decentralized Rainwater Harvesting Systems',
 		authors: [
 			{
 				name: 'Ana Rodríguez',
@@ -226,7 +227,7 @@ export const articles: Article[] = [
 	},
 	{
 		slug: 'first-year-drone-landing-pad-detection',
-		title: 'Simple Vision Markers for Reliable Drone Landing in Introductory Robotics Labs',
+		title: 'Simple Vision Markers for Reliable Drone Landing in Robotics Workflows',
 		authors: [
 			{
 				name: 'Ethan Clarke',
@@ -250,7 +251,7 @@ export const articles: Article[] = [
 	},
 	{
 		slug: 'bioplastic-film-tensile-tests',
-		title: 'Tensile Testing of Starch-Based Bioplastic Films for School Packaging Prototypes',
+		title: 'Tensile Testing of Starch-Based Bioplastic Films for Flexible Packaging Prototypes',
 		authors: [
 			{
 				name: 'Sofia Marin',
@@ -289,7 +290,7 @@ export const articles: Article[] = [
 	},
 	{
 		slug: 'smart-greenhouse-soil-moisture-control',
-		title: 'Rule-Based Soil Moisture Control for a Student-Built Mini Greenhouse',
+		title: 'Rule-Based Soil Moisture Control for a Compact Automated Greenhouse',
 		authors: [
 			{
 				name: 'Leila Ahmed',
@@ -314,6 +315,93 @@ export const articles: Article[] = [
 			title: 'Water Usage and Plant Growth Comparison',
 			caption:
 				'Figure 6 compares cumulative water consumption and growth outcomes between manual and automated irrigation groups.'
+		}
+	},
+	{
+		slug: 'edge-inference-wildfire-smoke-nowcasting',
+		title: 'Edge-Inference Pipeline for Short-Horizon Wildfire Smoke Nowcasting',
+		authors: [
+			{
+				name: 'Nadia Torres',
+				affiliation: 'University of California, Davis',
+				role: 'Author'
+			},
+			{
+				name: 'Ethan Clarke',
+				affiliation: 'Georgia Institute of Technology, First-Year Engineering',
+				role: 'Co-author'
+			}
+		],
+		abstract:
+			'This study evaluates a lightweight edge-inference workflow for near-real-time smoke-density nowcasting from low-power camera nodes. The authors compare quantized CNN variants under variable haze and lighting conditions and report latency, power draw, and forecast consistency across 600 annotated windows. The selected model reduced median inference latency by 31% while preserving prediction agreement within 4.2% of a larger cloud baseline. The paper outlines deployment trade-offs for constrained environmental sensing systems.',
+		tags: ['Environmental Monitoring', 'Machine Learning', 'Edge Computing'],
+		issueId: 'v14i6',
+		publishedOn: toIsoDateString(latestIssueDate),
+		doi: '10.35940/jyse.AIML.2026.140603',
+		citation:
+			'Torres, N., & Clarke, E. (2026). Edge-Inference Pipeline for Short-Horizon Wildfire Smoke Nowcasting. Journal of Young Scientists & Engineers, 14(6), 23-35. https://doi.org/10.35940/jyse.AIML.2026.140603',
+		figure: {
+			title: 'Latency-Accuracy Trade-Off Across Edge Models',
+			caption:
+				'Figure 3 compares end-to-end inference latency and forecast agreement for model variants deployed on embedded hardware.'
+		}
+	},
+	{
+		slug: 'thermal-battery-pack-anomaly-screening',
+		title: 'Thermal Imaging Workflow for Early Battery Pack Anomaly Screening',
+		authors: [
+			{
+				name: 'Priya Nair',
+				affiliation: 'Carnegie Mellon University, Biomedical Engineering',
+				role: 'Author'
+			},
+			{
+				name: 'Rohan Bedi',
+				affiliation: 'University of Washington, Materials Science and Engineering',
+				role: 'Co-author'
+			}
+		],
+		abstract:
+			'The authors present a thermal-imaging protocol for identifying early anomaly signatures in small lithium-ion battery modules. By combining frame differencing, region-threshold tracking, and cycle-level normalization, the workflow flags localized hotspots before threshold breach events. Across 120 controlled charge-discharge cycles, the method detected precursor anomalies an average of 14 minutes earlier than a voltage-only baseline. The study offers a reproducible screening framework for battery safety diagnostics.',
+		tags: ['Energy Storage', 'Thermal Analysis', 'Safety Engineering'],
+		issueId: 'v14i5',
+		publishedOn: toIsoDateString(previousIssueDate),
+		doi: '10.35940/jyse.ENE.2026.140505',
+		citation:
+			'Nair, P., & Bedi, R. (2026). Thermal Imaging Workflow for Early Battery Pack Anomaly Screening. Journal of Young Scientists & Engineers, 14(5), 47-58. https://doi.org/10.35940/jyse.ENE.2026.140505',
+		figure: {
+			title: 'Representative Thermal Drift Profiles',
+			caption:
+				'Figure 7 shows normalized hotspot trajectories across nominal and anomalous battery cycles.'
+		}
+	},
+	{
+		slug: 'federated-urban-noise-monitoring-benchmark',
+		title: 'Federated Benchmarking for Privacy-Preserving Urban Noise Monitoring',
+		authors: [
+			{
+				name: 'Ana Rodríguez',
+				affiliation: 'Northeastern University, First-Year Engineering Program',
+				role: 'Author'
+			},
+			{
+				name: 'Megan Choi',
+				affiliation: 'North Carolina State University, Chemical and Biomolecular Engineering',
+				role: 'Co-author'
+			}
+		],
+		abstract:
+			'This paper benchmarks a federated learning setup for acoustic event classification where raw recordings remain local to collection nodes. The authors evaluate aggregation rounds, client-dropout tolerance, and class-balance strategies using a shared protocol across five independently curated datasets. The best configuration improved macro-F1 by 9.6 points over a non-adaptive baseline while preserving data locality. Results highlight practical controls for robust privacy-preserving environmental audio analytics.',
+		tags: ['Signal Processing', 'Federated Learning', 'Smart Infrastructure'],
+		issueId: 'v14i4',
+		publishedOn: toIsoDateString(olderIssueDate),
+		doi: '10.35940/jyse.DSP.2026.140407',
+		citation:
+			'Rodríguez, A., & Choi, M. (2026). Federated Benchmarking for Privacy-Preserving Urban Noise Monitoring. Journal of Young Scientists & Engineers, 14(4), 39-52. https://doi.org/10.35940/jyse.DSP.2026.140407',
+		figure: {
+			title: 'Macro-F1 by Aggregation Strategy',
+			caption:
+				'Figure 8 compares performance across federated aggregation strategies under varying client-availability conditions.'
 		}
 	}
 ];
