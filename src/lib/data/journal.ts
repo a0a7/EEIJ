@@ -419,21 +419,21 @@ export const editorialBoard: BoardMember[] = [
 		role: 'Managing Editor',
 		affiliation: 'Riverton College',
 		interests: ['Scientific Writing', 'Publication Ethics', 'Peer Review Workflows'],
-		bio: 'Coordinates editorial operations and supports clear, fair peer-review communication across subject sections. Holds an MSc in Communication and does not hold a PhD.'
+		bio: 'Coordinates editorial operations and supports clear, fair peer-review communication across subject sections. Highest degree: MSc in Communication.'
 	},
 	{
 		name: 'Omar N. Rahman',
 		role: 'Associate Editor (Materials & Devices)',
 		affiliation: 'Coastal Polytechnic University',
 		interests: ['Materials Science', 'Device Prototyping', 'Testing Standards'],
-		bio: 'Handles materials and device submissions, emphasizing reproducible prototyping and transparent evaluation criteria. Holds an MEng in Materials Engineering and does not hold a PhD.'
+		bio: 'Handles materials and device submissions, emphasizing reproducible prototyping and transparent evaluation criteria. Highest degree: MEng in Materials Engineering.'
 	},
 	{
 		name: 'Daniel Park',
 		role: 'Associate Editor (Robotics & Learning Systems)',
 		affiliation: 'Lakeview School of Engineering',
 		interests: ['Robotics', 'Embedded Systems', 'Engineering Education'],
-		bio: 'Leads review handling for robotics and learning systems, with emphasis on classroom-ready engineering applications. Holds an MSc in Embedded Systems and does not hold a PhD.'
+		bio: 'Leads review handling for robotics and learning systems, with emphasis on classroom-ready engineering applications. Highest degree: MSc in Embedded Systems.'
 	}
 ];
 
