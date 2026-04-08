@@ -6,7 +6,6 @@
 		'Error-corrected deep learning approach to handwritten text recognition of Gregg shorthand';
 	const publishedLabel = '09 December 2025';
 	const submittedLabel = '24 July 2025';
-	const doiUrl = 'https://doi.org/10.xxxx/jyse.xxxx';
 	const futurePdfPath = `${journal.domain}/downloads/jyse-error-corrected-deep-learning-gregg-shorthand.pdf`;
 </script>
 
@@ -45,15 +44,7 @@
 			and release the work under a Creative Commons Attribution 4.0 International License (CC-BY).
 		</p>
 		<p class="mt-3">
-			<span class="font-semibold text-[var(--text-strong)]">DOI:</span>
-			<a
-				href={doiUrl}
-				target="_blank"
-				rel="noreferrer"
-				class="text-[var(--accent)] hover:underline"
-			>
-				10.xxxx/jyse.xxxx
-			</a>
+			<span class="font-semibold text-[var(--text-strong)]">DOI:</span> Pending assignment
 		</p>
 	</section>
 
