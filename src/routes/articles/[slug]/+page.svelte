@@ -46,7 +46,7 @@
 			class="inline-flex flex-wrap items-center gap-2 text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase"
 		>
 			<span aria-hidden="true">🔓</span>
-			<span>Open access • Peer reviewed • CC BY 4.0</span>
+			<span>Open access • Peer reviewed • CC BY-NC-SA 4.0</span>
 			<img src={licenseBadgeUrl} alt="CC BY-NC-SA 4.0" width="80" height="15" loading="lazy" />
 		</p>
 		<h1 class="text-4xl leading-tight font-semibold text-[var(--text-strong)] md:text-5xl">
