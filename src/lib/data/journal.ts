@@ -412,7 +412,7 @@ export const editorialBoard: BoardMember[] = [
 		role: 'Editor-in-Chief',
 		affiliation: 'The University of Texas at Austin',
 		interests: ['Applied Physics', 'Instrumentation', 'Research Methods'],
-		bio: 'Oversees editorial quality and review consistency, with a focus on practical experimental design and responsible AI methods. He holds a PhD'
+		bio: 'Oversees editorial quality and review consistency, with a focus on practical experimental design and responsible AI methods. He holds a PhD in information studies.'
 	},
 	{
 		name: 'Elena Petrova',
