@@ -60,7 +60,7 @@
 			<p class="text-sm leading-7 text-[var(--text-default)]">
 				{#each data.article.authors as author, i (author.name)}
 					<span class="font-medium text-[var(--text-strong)]">{author.name}</span>
-					<span> ({author.role})</span>
+					<span class="ml-1">({author.role})</span>
 					<!-- eslint-disable svelte/no-navigation-without-resolve -->
 					<a
 						href={getOrcidSearchUrl(author.name)}
