@@ -142,7 +142,7 @@
 						rel="noreferrer"
 						class="focus-ring inline-flex rounded-sm border border-[var(--border)] px-5 py-2 text-sm text-[var(--text-default)] hover:border-[var(--accent)]"
 					>
-						Supporting information
+						Search supporting repositories
 					</a>
 					<!-- eslint-enable svelte/no-navigation-without-resolve -->
 				</div>
