@@ -6,6 +6,7 @@
 	import favicon from '$lib/assets/favicon.png';
 	import { journal } from '$lib/data/journal';
 	import { page } from '$app/state';
+	import CookieBanner from '$lib/components/CookieBanner.svelte';
 
 	let { children } = $props();
 </script>
@@ -34,4 +35,5 @@
 		{/key}
 	</main>
 	<SiteFooter />
+	<CookieBanner />
 </div>
